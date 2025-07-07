@@ -1445,13 +1445,12 @@
 
             selected.forEach(function(q) {
                 // 関連文の漢字を学年以下に制限（高学年漢字をひらがな表記に変更）
-                const adjustedWord = adjustWordForGrade(q.word, grade);
                 const adjustedHint = adjustWordForGrade(q.hint, grade);
                 
                 if (mode === 'reading') {
                     questions.push({
                         type: 'reading',
-                        word: adjustedWord,
+                        word: q.word, // 読み問題では漢字をそのまま表示
                         reading: q.reading,
                         hint: adjustedHint,
                         correctAnswer: q.reading,
@@ -1460,7 +1459,7 @@
                 } else {
                     questions.push({
                         type: 'writing',
-                        word: adjustedWord,
+                        word: q.word, // 書き問題でも答えの漢字はそのまま表示
                         reading: q.reading,
                         hint: adjustedHint
                     });
