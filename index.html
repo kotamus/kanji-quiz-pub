@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="manifest" href="manifest.json">
+    <title>漢字クイズ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Yu Gothic', YuGothic, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .grade-selector, .mode-selector {
+            margin-bottom: 30px;
+        }
+
+        .grade-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .mode-buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .grade-btn, .mode-btn {
+            background: #f0f0f0;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .mode-btn {
+            padding: 25px;
+            font-size: 18px;
+        }
+
+        .grade-btn:hover, .mode-btn:hover {
+            background: #e0e0e0;
+            transform: translateY(-2px);
+        }
+
+        .grade-btn.active, .mode-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .quiz-container {
+            display: none;
+            position: relative;
+        }
+
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .back-to-top-btn {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top-btn:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+
+        .question-counter {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .question {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .question-text {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .reading-text {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .writing-display {
+            font-size: 48px;
+            color: #333;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .writing-instruction {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        #writingHint {
+            font-size: 16px;
+            color: #888;
+            background: #f0f0f0;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .self-check-buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .check-btn {
+            padding: 20px;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .check-btn.correct {
+            background: #4caf50;
+            color: white;
+        }
+
+        .check-btn.incorrect {
+            background: #f44336;
+            color: white;
+        }
+
+        .check-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .choices {
+            display: grid;
+            gap: 15px;
+        }
+
+        .choice-btn {
+            background: white;
+            border: 2px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 12px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .choice-btn:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .choice-btn.correct {
+            background: #4caf50;
+            color: white;
+            border-color: #4caf50;
+        }
+
+        .choice-btn.incorrect {
+            background: #f44336;
+            color: white;
+            border-color: #f44336;
+        }
+
+        .result {
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+            display: none;
+        }
+
+        .score {
+            font-size: 48px;
+            font-weight: bold;
+            color: #667eea;
+            margin: 20px 0;
+        }
+
+        .restart-btn, .back-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+
+        .restart-btn:hover, .back-btn:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .progress {
+            background: #e0e0e0;
+            height: 8px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            background: #667eea;
+            height: 100%;
+            width: 0;
+            transition: width 0.3s ease;
+        }
+
+        .loader {
+            text-align: center;
+            padding: 40px;
+            display: none;
+        }
+
+        .loader-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .mode-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .show-answer-btn {
+            background: #ff9800;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .show-answer-btn:hover {
+            background: #f57c00;
+            transform: translateY(-2px);
+        }
+
+        .answer-display {
+            font-size: 36px;
+            color: #4caf50;
+            margin-top: 20px;
+            font-weight: bold;
+            display: none;
+        }
+
+        /* カスタムモーダル */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-message {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .modal-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .modal-btn.ok {
+            background: #f44336;
+            color: white;
+        }
+
+        .modal-btn.cancel {
+            background: #6c757d;
+            color: white;
+        }
+
+        .modal-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 管理画面 */
+        .admin-btn {
+            background: #ff9800;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .admin-btn:hover {
+            background: #f57c00;
+            transform: translateY(-2px);
+        }
+
+        .admin-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .admin-panel .container {
+            max-width: 600px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 15px;
+        }
+
+        .close-admin-btn {
+            background: #6c757d;
+            color: white;
+            border: none;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .close-admin-btn:hover {
+            background: #5a6268;
+            transform: scale(1.1);
+        }
+
+        .admin-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .admin-tab {
+            background: #f0f0f0;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .admin-tab.active, .admin-tab:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .admin-content {
+            min-height: 300px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: #667eea;
+            outline: none;
+        }
+
+        .add-question-btn, .import-btn, .export-btn {
+            background: #4caf50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .add-question-btn:hover, .import-btn:hover, .export-btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+
+        .add-result, .import-result {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .add-result.success, .import-result.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .add-result.error, .import-result.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .question-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .question-item {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .question-item h4 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+
+        .question-item p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .export-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .export-section h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* モバイル対応 */
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            
+            .quiz-header {
+                margin-bottom: 10px;
+            }
+            
+            .back-to-top-btn {
+                padding: 6px 15px;
+                font-size: 13px;
+            }
+            
+            .question-counter {
+                font-size: 14px;
+            }
+            
+            .writing-display {
+                font-size: 36px;
+            }
+            
+            .answer-display {
+                font-size: 28px;
+            }
+            
+            .modal-content {
+                padding: 20px;
+                margin: 0 10px;
+            }
+            
+            .modal-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 漢字クイズ</h1>
+
+        <div class="grade-selector" id="gradeSelector">
+            <p style="text-align: center; margin-bottom: 15px; color: #666;">学年を選んでください</p>
+            <div class="grade-buttons">
+                <button class="grade-btn" data-grade="1">1年生</button>
+                <button class="grade-btn" data-grade="2">2年生</button>
+                <button class="grade-btn" data-grade="3">3年生</button>
+                <button class="grade-btn" data-grade="4">4年生</button>
+                <button class="grade-btn" data-grade="5">5年生</button>
+                <button class="grade-btn" data-grade="6">6年生</button>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="admin-btn" onclick="showAdminPanel()">📝 問題管理</button>
+            </div>
+        </div>
+
+        <div class="mode-selector" id="modeSelector" style="display: none;">
+            <p style="text-align: center; margin-bottom: 15px; color: #666;">テストの種類を選んでください</p>
+            <div class="mode-buttons">
+                <button class="mode-btn" data-mode="reading">
+                    <div class="mode-icon">📖</div>
+                    読みテスト
+                </button>
+                <button class="mode-btn" data-mode="writing">
+                    <div class="mode-icon">✏️</div>
+                    書きテスト
+                </button>
+            </div>
+        </div>
+
+        <div class="loader" id="loader">
+            <div class="loader-spinner"></div>
+            <p style="margin-top: 20px; color: #666;">問題を準備中...</p>
+        </div>
+
+        <div class="quiz-container" id="quizContainer">
+            <div class="quiz-header">
+                <button class="back-to-top-btn" onclick="showConfirmModal()">← 戻る</button>
+                <div class="question-counter" id="questionCounter">1 / 10</div>
+            </div>
+            
+            <div class="progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            
+            <div class="question">
+                <div class="question-text" id="questionText"></div>
+                <div class="reading-text" id="readingText"></div>
+                
+                <!-- 書きテスト用の表示 -->
+                <div id="writingSection" style="display: none;">
+                    <div class="writing-display" id="writingDisplay"></div>
+                    <div class="writing-instruction">この読み方の漢字を書いてください</div>
+                    <div class="reading-text" id="writingHint" style="margin-top: 10px;"></div>
+                    <button class="show-answer-btn" onclick="showAnswer()">答えを見る</button>
+                    <div class="answer-display" id="answerDisplay"></div>
+                    <div class="self-check-buttons">
+                        <button class="check-btn correct" onclick="selfCheck(true)">
+                            ⭕ 正解
+                        </button>
+                        <button class="check-btn incorrect" onclick="selfCheck(false)">
+                            ❌ 不正解
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="choices" id="choices"></div>
+        </div>
+
+        <div class="result" id="result">
+            <h2>クイズ終了！</h2>
+            <div class="score" id="score"></div>
+            <button class="restart-btn" onclick="restart()">もう一度挑戦</button>
+            <button class="back-btn" onclick="backToMenu()">メニューに戻る</button>
+        </div>
+
+        <!-- 管理画面 -->
+        <div class="admin-panel" id="adminPanel" style="display: none;">
+            <div class="admin-header">
+                <h2>📝 問題管理</h2>
+                <button class="close-admin-btn" onclick="hideAdminPanel()">✕</button>
+            </div>
+            
+            <div class="admin-tabs">
+                <button class="admin-tab active" onclick="showAdminTab('add')">問題追加</button>
+                <button class="admin-tab" onclick="showAdminTab('view')">問題一覧</button>
+                <button class="admin-tab" onclick="showAdminTab('import')">データ取込</button>
+            </div>
+            
+            <!-- 問題追加タブ -->
+            <div class="admin-content" id="adminAdd">
+                <div class="form-group">
+                    <label>学年:</label>
+                    <select id="addGrade">
+                        <option value="1">1年生</option>
+                        <option value="2">2年生</option>
+                        <option value="3">3年生</option>
+                        <option value="4">4年生</option>
+                        <option value="5">5年生</option>
+                        <option value="6">6年生</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>漢字・単語:</label>
+                    <input type="text" id="addWord" placeholder="例: 山">
+                </div>
+                
+                <div class="form-group">
+                    <label>読み方:</label>
+                    <input type="text" id="addReading" placeholder="例: やま">
+                </div>
+                
+                <div class="form-group">
+                    <label>ヒント:</label>
+                    <input type="text" id="addHint" placeholder="例: 高くてのぼるところ">
+                </div>
+                
+                <div class="form-group">
+                    <label>問題タイプ:</label>
+                    <select id="addType">
+                        <option value="both">読み・書き両方</option>
+                        <option value="reading">読みテストのみ</option>
+                        <option value="writing">書きテストのみ</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>難易度:</label>
+                    <select id="addDifficulty">
+                        <option value="1">簡単</option>
+                        <option value="2">普通</option>
+                        <option value="3">難しい</option>
+                    </select>
+                </div>
+                
+                <button class="add-question-btn" onclick="addQuestion()">問題を追加</button>
+                <div class="add-result" id="addResult"></div>
+            </div>
+            
+            <!-- 問題一覧タブ -->
+            <div class="admin-content" id="adminView" style="display: none;">
+                <div class="form-group">
+                    <label>表示学年:</label>
+                    <select id="viewGrade" onchange="showQuestionList()">
+                        <option value="1">1年生</option>
+                        <option value="2">2年生</option>
+                        <option value="3">3年生</option>
+                        <option value="4">4年生</option>
+                        <option value="5">5年生</option>
+                        <option value="6">6年生</option>
+                    </select>
+                </div>
+                <div class="question-list" id="questionList"></div>
+            </div>
+            
+            <!-- データ取込タブ -->
+            <div class="admin-content" id="adminImport" style="display: none;">
+                <p>JSONファイルをテキストエリアに貼り付けて取り込みできます。</p>
+                <div class="form-group">
+                    <label>JSONデータ:</label>
+                    <textarea id="importData" rows="10" placeholder='{"grade": 1, "questions": [...]}'></textarea>
+                </div>
+                <button class="import-btn" onclick="importQuestions()">データを取り込む</button>
+                <div class="import-result" id="importResult"></div>
+                
+                <div class="export-section">
+                    <h3>データエクスポート</h3>
+                    <div class="form-group">
+                        <label>エクスポート学年:</label>
+                        <select id="exportGrade">
+                            <option value="1">1年生</option>
+                            <option value="2">2年生</option>
+                            <option value="3">3年生</option>
+                            <option value="4">4年生</option>
+                            <option value="5">5年生</option>
+                            <option value="6">6年生</option>
+                        </select>
+                        <button class="export-btn" onclick="exportQuestions()">エクスポート</button>
+                    </div>
+                    <textarea id="exportData" rows="8" readonly placeholder="エクスポートされたJSONデータがここに表示されます"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- カスタムモーダル -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <div class="modal-message" id="modalMessage"></div>
+            <div class="modal-buttons">
+                <button class="modal-btn ok" onclick="handleModalOK()">はい</button>
+                <button class="modal-btn cancel" onclick="hideModal()">いいえ</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // グローバル変数
+        let kanjiDatabase = {};
+        let currentGrade = null;
+        let currentMode = null;
+        let currentQuestions = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let allKanjiByGrade = {};
+        let modalCallback = null;
+
+        // カスタムモーダル機能
+        function showModal(message, onOK, onCancel) {
+            document.getElementById('modalMessage').textContent = message;
+            document.getElementById('modalOverlay').style.display = 'flex';
+            modalCallback = { onOK, onCancel };
+        }
+
+        function hideModal() {
+            document.getElementById('modalOverlay').style.display = 'none';
+            if (modalCallback && modalCallback.onCancel) {
+                modalCallback.onCancel();
+            }
+            modalCallback = null;
+        }
+
+        function handleModalOK() {
+            document.getElementById('modalOverlay').style.display = 'none';
+            if (modalCallback && modalCallback.onOK) {
+                modalCallback.onOK();
+            }
+            modalCallback = null;
+        }
+
+        // 確認モーダルを表示
+        function showConfirmModal() {
+            showModal(
+                'クイズを中断してトップに戻りますか？\n現在の進捗は失われます。',
+                function() { backToMenu(); },
+                null
+            );
+        }
+
+        // エラーメッセージ表示
+        function showErrorMessage(message) {
+            showModal(
+                message,
+                function() { backToMenu(); },
+                null
+            );
+        }
+
+        // トップに戻る（グローバルスコープ）
+        function backToMenu() {
+            // すべての画面を非表示
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('quizContainer').style.display = 'none';
+            document.getElementById('modeSelector').style.display = 'none';
+            
+            // 学年選択画面を表示
+            document.getElementById('gradeSelector').style.display = 'block';
+            
+            // リセット
+            document.querySelectorAll('.grade-btn').forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            document.querySelectorAll('.mode-btn').forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            
+            currentGrade = null;
+            currentMode = null;
+            currentQuestions = [];
+            currentQuestionIndex = 0;
+            score = 0;
+        }
+
+        // 答えを表示（グローバルスコープ）
+        function showAnswer() {
+            document.getElementById('answerDisplay').style.display = 'block';
+        }
+        
+        // 自己採点（グローバルスコープ）
+        function selfCheck(isCorrect) {
+            // ボタンを無効化
+            document.querySelectorAll('.check-btn').forEach(function(btn) {
+                btn.disabled = true;
+            });
+            
+            if (isCorrect) {
+                score++;
+            }
+            
+            setTimeout(function() {
+                currentQuestionIndex++;
+                if (currentQuestionIndex < currentQuestions.length) {
+                    showQuestion();
+                } else {
+                    showResult();
+                }
+            }, 1000);
+        }
+        
+        // リスタート（グローバルスコープ）
+        function restart() {
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('quizContainer').style.display = 'none';
+            
+            currentQuestionIndex = 0;
+            score = 0;
+            
+            startQuiz();
+        }
+
+        // 初期化時にサンプルデータを設定
+        function initializeSampleData() {
+            // 1年生のサンプルデータ
+            kanjiDatabase[1] = {
+                grade: 1,
+                kanjiList: ['一', '右', '雨', '円', '王', '音', '下', '火', '花', '貝', '学', '気', '九', '休', '玉', '金', '空', '月', '犬', '見', '五', '口', '校', '左', '三', '山', '子', '四', '糸', '字', '耳', '七', '車', '手', '十', '出', '女', '小', '上', '森', '人', '水', '正', '生', '青', '夕', '石', '赤', '千', '川', '先', '早', '草', '足', '村', '大', '男', '竹', '中', '虫', '町', '天', '田', '土', '二', '日', '入', '年', '白', '八', '百', '文', '木', '本', '名', '目', '立', '力', '林', '六'],
+                questions: [
+                    { type: 'both', word: '山', reading: 'やま', hint: '高くてのぼるところ', difficulty: 1 },
+                    { type: 'both', word: '川', reading: 'かわ', hint: '水がながれているところ', difficulty: 1 },
+                    { type: 'both', word: '学校', reading: 'がっこう', hint: 'べんきょうをするところ', difficulty: 2 },
+                    { type: 'both', word: '先生', reading: 'せんせい', hint: 'べんきょうを教えてくれる人', difficulty: 2 },
+                    { type: 'both', word: '本', reading: 'ほん', hint: 'よむもの、ページがあるもの', difficulty: 1 },
+                    { type: 'both', word: '日', reading: 'ひ', hint: 'たいよう、あさのぼる', difficulty: 1 },
+                    { type: 'both', word: '月', reading: 'つき', hint: 'よるに見える、まるいもの', difficulty: 1 },
+                    { type: 'both', word: '人', reading: 'ひと', hint: 'わたしたちのこと', difficulty: 1 },
+                    { type: 'both', word: '火', reading: 'ひ', hint: 'あつくて赤い、もえるもの', difficulty: 1 },
+                    { type: 'both', word: '水', reading: 'みず', hint: 'のむもの、さらさらしてる', difficulty: 1 },
+                    { type: 'both', word: '木', reading: 'き', hint: 'はっぱがある、みどりのもの', difficulty: 1 },
+                    { type: 'both', word: '金', reading: 'きん', hint: 'きいろくて、おかねになる', difficulty: 1 },
+                    { type: 'both', word: '土', reading: 'つち', hint: 'じめんにある、くろいもの', difficulty: 1 },
+                    { type: 'both', word: '空', reading: 'そら', hint: 'うえを見ると、あおい', difficulty: 1 },
+                    { type: 'both', word: '雨', reading: 'あめ', hint: 'そらからふってくる水', difficulty: 1 },
+                    { type: 'both', word: '石', reading: 'いし', hint: 'かたくて、じめんにある', difficulty: 1 },
+                    { type: 'both', word: '花', reading: 'はな', hint: 'きれいで、いいにおい', difficulty: 1 },
+                    { type: 'both', word: '草', reading: 'くさ', hint: 'みどりで、じめんにはえる', difficulty: 1 },
+                    { type: 'both', word: '犬', reading: 'いぬ', hint: 'ワンワンとなく、ペット', difficulty: 1 },
+                    { type: 'both', word: '車', reading: 'くるま', hint: 'タイヤがある、のりもの', difficulty: 1 }
+                ]
+            };
+
+            // 2年生のサンプルデータ
+            kanjiDatabase[2] = {
+                grade: 2,
+                kanjiList: ['引', '羽', '雲', '園', '遠', '何', '科', '夏', '家', '歌', '画', '回', '会', '海', '絵', '外', '角', '楽', '活', '間', '丸', '岩', '顔', '汽', '記', '帰', '弓', '牛', '魚', '京', '強', '教', '近', '兄', '形', '計', '元', '言', '原', '戸', '古', '午', '後', '語', '工', '公', '広', '交', '光', '考', '行', '高', '黄', '合', '谷', '国', '黒', '今', '才', '細', '作', '算', '止', '市', '矢', '姉', '思', '紙', '寺', '自', '時', '室', '社', '弱', '首', '秋', '週', '春', '書', '少', '場', '色', '食', '心', '新', '親', '図', '数', '西', '声', '星', '晴', '切', '雪', '船', '線', '前', '組', '走', '多', '太', '体', '台', '地', '池', '知', '茶', '昼', '長', '鳥', '朝', '直', '通', '弟', '店', '点', '電', '刀', '冬', '当', '東', '答', '頭', '同', '道', '読', '内', '南', '肉', '馬', '売', '買', '麦', '半', '番', '父', '風', '分', '聞', '米', '歩', '母', '方', '北', '毎', '妹', '万', '明', '鳴', '毛', '門', '夜', '野', '友', '用', '曜', '来', '里', '理', '話'],
+                questions: [
+                    { type: 'both', word: '教室', reading: 'きょうしつ', hint: 'じゅぎょうをうける部屋', difficulty: 2 },
+                    { type: 'both', word: '友だち', reading: 'ともだち', hint: 'いっしょにあそぶ、なかよしの人', difficulty: 1 },
+                    { type: 'both', word: '夏休み', reading: 'なつやすみ', hint: 'あつい時のながいおやすみ', difficulty: 2 },
+                    { type: 'both', word: '春', reading: 'はる', hint: 'さくらがさく、あたたかいきせつ', difficulty: 1 },
+                    { type: 'both', word: '風', reading: 'かぜ', hint: 'そらからふいてくる、きもちいい', difficulty: 1 },
+                    { type: 'both', word: '雨', reading: 'あめ', hint: 'そらからふってくる水、かさをさす', difficulty: 1 },
+                    { type: 'both', word: '雪', reading: 'ゆき', hint: 'ふゆにふる、しろくてつめたい', difficulty: 1 },
+                    { type: 'both', word: '電車', reading: 'でんしゃ', hint: 'レールのうえをはしる、えきにくる', difficulty: 2 },
+                    { type: 'both', word: '新しい', reading: 'あたらしい', hint: 'きのうかった、ピカピカの', difficulty: 2 },
+                    { type: 'both', word: '古い', reading: 'ふるい', hint: 'ずっとまえからある、おじいちゃんの', difficulty: 1 },
+                    { type: 'both', word: '明るい', reading: 'あかるい', hint: 'ひかりがたくさん、よく見える', difficulty: 2 },
+                    { type: 'both', word: '暗い', reading: 'くらい', hint: 'ひかりがない、よる見えない', difficulty: 1 },
+                    { type: 'both', word: '長い', reading: 'ながい', hint: 'はしからはしまでとおい', difficulty: 1 },
+                    { type: 'both', word: '短い', reading: 'みじかい', hint: 'すぐおわる、ちいさい', difficulty: 1 },
+                    { type: 'both', word: '強い', reading: 'つよい', hint: 'ちからがある、まけない', difficulty: 1 }
+                ]
+            };
+
+            // 3年生のデータ
+            kanjiDatabase[3] = {
+                grade: 3,
+                kanjiList: ["悪", "安", "暗", "医", "委", "意", "育", "員", "院", "飲", "運", "泳", "駅", "央", "横", "屋", "温", "化", "荷", "界", "開", "階", "寒", "感", "漢", "館", "岸", "起", "期", "客", "究", "急", "級", "宮", "球", "去", "橋", "業", "曲", "局", "銀", "区", "苦", "具", "君", "係", "軽", "血", "決", "研", "県", "庫", "湖", "向", "幸", "港", "号", "根", "祭", "皿", "仕", "死", "使", "始", "指", "歯", "詩", "次", "事", "持", "式", "実", "写", "者", "主", "守", "取", "酒", "受", "州", "拾", "終", "習", "集", "住", "重", "宿", "所", "暑", "助", "昭", "消", "商", "章", "勝", "乗", "植", "申", "身", "神", "真", "深", "進", "世", "整", "昔", "全", "相", "送", "想", "息", "速", "族", "他", "打", "対", "待", "代", "第", "題", "炭", "短", "談", "着", "注", "柱", "丁", "帳", "調", "追", "定", "庭", "笛", "鉄", "転", "都", "度", "投", "豆", "島", "湯", "登", "等", "動", "童", "農", "波", "配", "倍", "畑", "発", "反", "坂", "板", "皮", "悲", "美", "鼻", "筆", "氷", "表", "秒", "病", "品", "負", "部", "服", "福", "物", "平", "返", "勉", "放", "味", "命", "面", "問", "役", "薬", "由", "油", "有", "遊", "予", "羊", "洋", "葉", "陽", "様", "落", "流", "旅", "両", "緑", "礼", "列", "練", "路", "和"],
+                questions: [
+                    { type: 'both', word: '宿題', reading: 'しゅくだい', hint: '学校で出される、家でやるべんきょう', difficulty: 2 },
+                    { type: 'both', word: '委員', reading: 'いいん', hint: 'クラスのみんなのためにお仕事をする人', difficulty: 2 },
+                    { type: 'both', word: '図書館', reading: 'としょかん', hint: '本がたくさんある、べんきょうや読書をする建物', difficulty: 2 },
+                    { type: 'both', word: '運動', reading: 'うんどう', hint: '体を動かすこと、走ったり跳んだりする', difficulty: 2 },
+                    { type: 'both', word: '泳ぐ', reading: 'およぐ', hint: '水の中を進む、プールや海でする', difficulty: 1 },
+                    { type: 'both', word: '駅', reading: 'えき', hint: '電車に乗る場所、切符を買うところ', difficulty: 1 },
+                    { type: 'both', word: '温度', reading: 'おんど', hint: 'あつさやさむさを数字で表したもの', difficulty: 2 },
+                    { type: 'both', word: '開始', reading: 'かいし', hint: '始まること、スタートすること', difficulty: 2 },
+                    { type: 'both', word: '階段', reading: 'かいだん', hint: '上の階に上がる、段になっている道', difficulty: 2 },
+                    { type: 'both', word: '寒い', reading: 'さむい', hint: '冬の外のようす、コートが必要な天気', difficulty: 1 },
+                    { type: 'both', word: '感じる', reading: 'かんじる', hint: '心や体で何かを知る、気持ちを持つ', difficulty: 2 },
+                    { type: 'both', word: '漢字', reading: 'かんじ', hint: '中国から来た文字、今べんきょうしている字', difficulty: 2 },
+                    { type: 'both', word: '岸', reading: 'きし', hint: '海や川のはじっこ、水際のところ', difficulty: 1 },
+                    { type: 'both', word: '起きる', reading: 'おきる', hint: '朝ベッドから出る、眠りから目覚める', difficulty: 1 },
+                    { type: 'both', word: '期間', reading: 'きかん', hint: '始まりから終わりまでの時間', difficulty: 2 },
+                    { type: 'both', word: '急ぐ', reading: 'いそぐ', hint: '速く行動する、遅刻しそうなときにする', difficulty: 1 },
+                    { type: 'both', word: '級', reading: 'きゅう', hint: '段階や等級、漢字けんていの○級', difficulty: 1 },
+                    { type: 'both', word: '球', reading: 'きゅう', hint: 'まん丸な形、野球やサッカーボール', difficulty: 1 },
+                    { type: 'both', word: '橋', reading: 'はし', hint: '川や道路の上を渡る、つなぐもの', difficulty: 1 },
+                    { type: 'both', word: '曲', reading: 'きょく', hint: '音楽の歌、メロディーがあるもの', difficulty: 1 },
+                    { type: 'both', word: '銀行', reading: 'ぎんこう', hint: 'お金を預ける建物、ATMがある場所', difficulty: 2 },
+                    { type: 'both', word: '苦しい', reading: 'くるしい', hint: '辛い、困っている、大変な状態', difficulty: 1 },
+                    { type: 'both', word: '道具', reading: 'どうぐ', hint: '何かをするときに使うもの、工具や用具', difficulty: 1 },
+                    { type: 'both', word: '君', reading: 'きみ', hint: '友達を呼ぶとき、男の子に使う言葉', difficulty: 1 },
+                    { type: 'both', word: '係', reading: 'かかり', hint: 'クラスの仕事をする人、給食係など', difficulty: 1 },
+                    { type: 'both', word: '軽い', reading: 'かるい', hint: '重くない、持ち上げやすい', difficulty: 1 },
+                    { type: 'both', word: '血', reading: 'ち', hint: '体の中を流れる赤い液体', difficulty: 1 },
+                    { type: 'both', word: '決める', reading: 'きめる', hint: '選ぶ、はっきりさせる', difficulty: 1 },
+                    { type: 'both', word: '県', reading: 'けん', hint: '日本の47の地域、○○県', difficulty: 1 },
+                    { type: 'both', word: '湖', reading: 'みずうみ', hint: '山に囲まれた大きな水、びわ湖など', difficulty: 1 }
+                ]
+            };
+
+            // 4年生のデータ
+            kanjiDatabase[4] = {
+                grade: 4,
+                kanjiList: ["愛", "案", "以", "衣", "位", "茨", "印", "英", "栄", "媛", "塩", "岡", "億", "加", "果", "貨", "課", "芽", "賀", "改", "械", "害", "街", "各", "覚", "潟", "完", "官", "管", "関", "観", "願", "岐", "希", "季", "旗", "器", "機", "議", "求", "泣", "給", "挙", "漁", "共", "協", "鏡", "競", "極", "熊", "訓", "軍", "郡", "群", "径", "景", "芸", "欠", "結", "建", "健", "験", "固", "功", "好", "香", "候", "康", "佐", "差", "菜", "最", "埼", "材", "崎", "昨", "札", "刷", "察", "参", "産", "散", "残", "氏", "司", "試", "児", "治", "滋", "辞", "鹿", "失", "借", "種", "周", "祝", "順", "初", "松", "笑", "唱", "焼", "照", "城", "縄", "臣", "信", "井", "成", "省", "清", "静", "席", "積", "折", "節", "説", "浅", "戦", "選", "然", "争", "倉", "巣", "束", "側", "続", "卒", "孫", "帯", "隊", "達", "単", "置", "仲", "沖", "兆", "低", "底", "的", "典", "伝", "徒", "努", "灯", "働", "特", "徳", "栃", "奈", "梨", "熱", "念", "敗", "梅", "博", "阪", "飯", "飛", "必", "票", "標", "不", "夫", "付", "府", "阜", "富", "副", "兵", "別", "辺", "変", "便", "包", "法", "望", "牧", "末", "満", "未", "民", "無", "約", "勇", "要", "養", "浴", "利", "陸", "良", "料", "量", "輪", "類", "令", "冷", "例", "連", "老", "労", "録"],
+                questions: [
+                    { type: 'both', word: '愛情', reading: 'あいじょう', hint: '家族や友だちを大切に思う気持ち', difficulty: 2 },
+                    { type: 'both', word: '案内', reading: 'あんない', hint: '道を教える、場所を説明する', difficulty: 2 },
+                    { type: 'both', word: '以上', reading: 'いじょう', hint: 'それより多い、それを含んで上', difficulty: 2 },
+                    { type: 'both', word: '衣服', reading: 'いふく', hint: '着る物、洋服や和服', difficulty: 2 },
+                    { type: 'both', word: '位置', reading: 'いち', hint: '物がある場所、位置関係', difficulty: 2 },
+                    { type: 'both', word: '囲む', reading: 'かこむ', hint: '周りを取り囲む、みんなで輪になる', difficulty: 1 },
+                    { type: 'both', word: '印象', reading: 'いんしょう', hint: '心に残る感じ、第一印象', difficulty: 2 },
+                    { type: 'both', word: '英語', reading: 'えいご', hint: '外国の言葉、Hello, Thank you', difficulty: 1 },
+                    { type: 'both', word: 'えいよう', reading: 'えいよう', hint: '体を元気にする、食べ物の力', difficulty: 2 },
+                    { type: 'both', word: '塩', reading: 'しお', hint: '海水から作る白い調味料、しょっぱい', difficulty: 1 },
+                    { type: 'both', word: '億', reading: 'おく', hint: 'とても大きな数、100,000,000', difficulty: 1 },
+                    { type: 'both', word: '加える', reading: 'くわえる', hint: '新しく付け足す、仲間に加える', difficulty: 1 },
+                    { type: 'both', word: '果物', reading: 'くだもの', hint: 'りんごやみかん、甘い食べ物', difficulty: 1 },
+                    { type: 'both', word: '課題', reading: 'かだい', hint: 'やらなければいけないべんきょうや仕事', difficulty: 2 },
+                    { type: 'both', word: '芽', reading: 'め', hint: 'しょくぶつの新しい部分、春に出てくる', difficulty: 1 },
+                    { type: 'both', word: 'かいりょう', reading: 'かいりょう', hint: 'もっと良くする、直して良くする', difficulty: 2 },
+                    { type: 'both', word: 'きかい', reading: 'きかい', hint: '人の代わりに働く道具、ロボットなど', difficulty: 2 },
+                    { type: 'both', word: '各自', reading: 'かくじ', hint: '一人一人、それぞれの人', difficulty: 2 },
+                    { type: 'both', word: '覚える', reading: 'おぼえる', hint: '頭に入れる、きおくする', difficulty: 1 },
+                    { type: 'both', word: 'かんせい', reading: 'かんせい', hint: '最後まで作り上げる、かんぜんに出来上がる', difficulty: 2 },
+                    { type: 'both', word: 'かんり', reading: 'かんり', hint: 'きちんと世話をする、せきにんを持つ', difficulty: 2 },
+                    { type: 'both', word: '関係', reading: 'かんけい', hint: 'つながり、お互いの関わり', difficulty: 2 },
+                    { type: 'both', word: 'かんさつ', reading: 'かんさつ', hint: 'よく見て調べる、理科のじっけんで', difficulty: 2 },
+                    { type: 'both', word: '願い', reading: 'ねがい', hint: '心から望むこと、お祈りすること', difficulty: 1 },
+                    { type: 'both', word: 'きぼう', reading: 'きぼう', hint: 'こうなって欲しいという気持ち', difficulty: 2 },
+                    { type: 'both', word: 'きせつ', reading: 'きせつ', hint: '春夏秋冬、一年の時期', difficulty: 1 },
+                    { type: 'both', word: '喜ぶ', reading: 'よろこぶ', hint: 'うれしい気持ちになる、えがおになる', difficulty: 1 },
+                    { type: 'both', word: '旗', reading: 'はた', hint: '国や学校の印、風でひらひら', difficulty: 1 },
+                    { type: 'both', word: '器具', reading: 'きぐ', hint: '何かをするための道具', difficulty: 2 },
+                    { type: 'both', word: 'ぎろん', reading: 'ぎろん', hint: 'みんなで話し合う、いけんをこうかんする', difficulty: 2 }
+                ]
+            };
+
+            // 5年生のデータ
+            kanjiDatabase[5] = {
+                grade: 5,
+                kanjiList: ["圧", "囲", "移", "因", "永", "営", "衛", "易", "益", "液", "演", "応", "往", "桜", "可", "仮", "価", "河", "過", "快", "解", "格", "確", "額", "刊", "幹", "慣", "眼", "紀", "基", "寄", "規", "喜", "技", "義", "逆", "久", "旧", "救", "居", "許", "境", "均", "禁", "句", "型", "経", "潔", "件", "険", "検", "限", "現", "減", "故", "個", "護", "効", "厚", "耕", "航", "鉱", "構", "興", "講", "告", "混", "査", "再", "災", "妻", "採", "際", "在", "財", "罪", "殺", "雑", "酸", "賛", "士", "支", "史", "志", "枝", "師", "資", "飼", "示", "似", "識", "質", "舎", "謝", "授", "修", "述", "術", "準", "序", "招", "証", "象", "賞", "条", "状", "常", "情", "織", "職", "制", "性", "政", "勢", "精", "製", "税", "責", "績", "接", "設", "絶", "祖", "素", "総", "造", "像", "増", "則", "測", "属", "率", "損", "貸", "態", "団", "断", "築", "貯", "張", "停", "提", "程", "適", "統", "堂", "銅", "導", "得", "毒", "独", "任", "燃", "能", "破", "犯", "判", "版", "比", "肥", "非", "費", "備", "評", "貧", "布", "婦", "武", "復", "複", "仏", "粉", "編", "弁", "保", "墓", "報", "豊", "防", "貿", "暴", "脈", "務", "夢", "迷", "綿", "輸", "余", "容", "略", "留", "領", "歴"],
+                questions: [
+                    { type: 'both', word: 'あつりょく', reading: 'あつりょく', hint: '強く押しつける力、プレッシャー', difficulty: 2 },
+                    { type: 'both', word: 'いどう', reading: 'いどう', hint: '場所を変えて動く、ひっこしなど', difficulty: 2 },
+                    { type: 'both', word: 'げんいん', reading: 'げんいん', hint: 'なぜそうなったかの理由、きっかけ', difficulty: 2 },
+                    { type: 'both', word: 'えいえん', reading: 'えいえん', hint: 'いつまでも続く、終わりがない', difficulty: 2 },
+                    { type: 'both', word: 'えいぎょう', reading: 'えいぎょう', hint: 'しょうばいをする、お店を開けている', difficulty: 2 },
+                    { type: 'both', word: 'えいせい', reading: 'えいせい', hint: 'せいけつでけんこうてき、びょうきをふせぐ', difficulty: 2 },
+                    { type: 'both', word: 'ようい', reading: 'ようい', hint: 'かんたんで難しくない、やりやすい', difficulty: 2 },
+                    { type: 'both', word: 'りえき', reading: 'りえき', hint: 'とくをすること、もうけ', difficulty: 2 },
+                    { type: 'both', word: 'えきたい', reading: 'えきたい', hint: '水のように流れるもの、こたいでないもの', difficulty: 2 },
+                    { type: 'both', word: 'えんそう', reading: 'えんそう', hint: 'がっきを使って音楽を奏でる', difficulty: 2 },
+                    { type: 'both', word: 'おうえん', reading: 'おうえん', hint: 'がんばっている人をはげます、しえんする', difficulty: 2 },
+                    { type: 'both', word: 'おうふく', reading: 'おうふく', hint: '行きと帰り、そこまで行って戻ってくる', difficulty: 2 },
+                    { type: 'both', word: '桜', reading: 'さくら', hint: '春に咲くピンクの花、日本のだいひょうてきな花', difficulty: 1 },
+                    { type: 'both', word: 'おんがえし', reading: 'おんがえし', hint: 'お世話になった人にお礼をする', difficulty: 2 },
+                    { type: 'both', word: 'かのう', reading: 'かのう', hint: 'できること、じつげんできる', difficulty: 2 },
+                    { type: 'both', word: 'かてい', reading: 'かてい', hint: 'もしもの話、そうぞうで考える', difficulty: 2 },
+                    { type: 'both', word: 'かかく', reading: 'かかく', hint: '物のねだん、お金のりょう', difficulty: 2 },
+                    { type: 'both', word: 'かせん', reading: 'かせん', hint: '川の流れ、水が流れる道', difficulty: 2 },
+                    { type: 'both', word: '過去', reading: 'かこ', hint: '今より前の時間、昔のこと', difficulty: 2 },
+                    { type: 'both', word: 'かいてき', reading: 'かいてき', hint: '気持ちよくて過ごしやすい', difficulty: 2 },
+                    { type: 'both', word: 'かいけつ', reading: 'かいけつ', hint: 'もんだいを解いて答えを見つける', difficulty: 2 },
+                    { type: 'both', word: 'かっこう', reading: 'かっこう', hint: 'ふくそうや見た目、スタイル', difficulty: 2 },
+                    { type: 'both', word: 'かくにん', reading: 'かくにん', hint: 'まちがいがないか調べる、チェックする', difficulty: 2 },
+                    { type: 'both', word: 'きんがく', reading: 'きんがく', hint: 'お金のりょう、だいきんのごうけい', difficulty: 2 },
+                    { type: 'both', word: 'はっかん', reading: 'はっかん', hint: '本やざっしをしゅっぱんする、世に出す', difficulty: 2 },
+                    { type: 'both', word: 'かんじ', reading: 'かんじ', hint: 'グループの世話やく、まとめやく', difficulty: 2 },
+                    { type: 'both', word: 'しゅうかん', reading: 'しゅうかん', hint: '毎日続けていること、クセ', difficulty: 2 },
+                    { type: 'both', word: 'めがね', reading: 'めがね', hint: '目にかける道具、しりょくをほせいする', difficulty: 1 },
+                    { type: 'both', word: 'きほん', reading: 'きほん', hint: '一番大切な土台、きそとなること', difficulty: 2 },
+                    { type: 'both', word: 'きふ', reading: 'きふ', hint: 'こまっている人にお金や物をおくる', difficulty: 2 }
+                ]
+            };
+
+            // 6年生のデータ
+            kanjiDatabase[6] = {
+                grade: 6,
+                kanjiList: ["胃", "異", "遺", "域", "宇", "映", "延", "沿", "恩", "我", "灰", "拡", "革", "閣", "割", "株", "干", "巻", "看", "簡", "危", "机", "揮", "貴", "疑", "吸", "供", "胸", "郷", "勤", "筋", "系", "敬", "警", "劇", "激", "穴", "券", "絹", "権", "憲", "源", "厳", "己", "呼", "誤", "后", "孝", "皇", "紅", "降", "鋼", "刻", "穀", "骨", "困", "砂", "座", "済", "裁", "策", "冊", "蚕", "至", "私", "姿", "視", "詞", "誌", "磁", "射", "捨", "尺", "若", "樹", "収", "宗", "就", "衆", "従", "縦", "縮", "熟", "純", "処", "署", "諸", "除", "承", "将", "傷", "障", "蒸", "針", "仁", "垂", "推", "寸", "盛", "聖", "誠", "舌", "宣", "専", "泉", "洗", "染", "銭", "善", "奏", "窓", "創", "装", "層", "操", "蔵", "臓", "存", "尊", "退", "宅", "担", "探", "誕", "段", "暖", "値", "宙", "忠", "著", "庁", "頂", "腸", "潮", "賃", "痛", "敵", "展", "討", "党", "糖", "届", "難", "乳", "認", "納", "脳", "派", "拝", "背", "肺", "俳", "班", "晩", "否", "批", "秘", "俵", "腹", "奮", "並", "陛", "閉", "片", "補", "暮", "宝", "訪", "亡", "忘", "棒", "枚", "幕", "密", "盟", "模", "訳", "郵", "優", "預", "幼", "欲", "翌", "乱", "卵", "覧", "裏", "律", "臨", "朗", "論"],
+                questions: [
+                    { type: 'both', word: 'いじょう', reading: 'いじょう', hint: 'ふつうと違う、おかしな状態', difficulty: 2 },
+                    { type: 'both', word: 'いせき', reading: 'いせき', hint: '昔の人が残した建物や道具の跡', difficulty: 2 },
+                    { type: 'both', word: 'ちいき', reading: 'ちいき', hint: 'ある範囲の土地、ちく', difficulty: 2 },
+                    { type: 'both', word: 'うちゅう', reading: 'うちゅう', hint: '地球の外のむげんに広がる空間', difficulty: 2 },
+                    { type: 'both', word: '映画', reading: 'えいが', hint: 'スクリーンに映る動く絵、ムービー', difficulty: 1 },
+                    { type: 'both', word: 'えんちょう', reading: 'えんちょう', hint: '時間や長さを伸ばす、長くする', difficulty: 2 },
+                    { type: 'both', word: 'えんがん', reading: 'えんがん', hint: '海や川の岸に沿った地域', difficulty: 2 },
+                    { type: 'both', word: 'おんけい', reading: 'おんけい', hint: '受けたしんせつやめぐみ、ありがたいこと', difficulty: 2 },
+                    { type: 'both', word: 'じが', reading: 'じが', hint: '自分というい式、じこ', difficulty: 2 },
+                    { type: 'both', word: '灰色', reading: 'はいいろ', hint: '白と黒の中間の色、グレー', difficulty: 1 },
+                    { type: 'both', word: 'かくだい', reading: 'かくだい', hint: '大きくする、広げる', difficulty: 2 },
+                    { type: 'both', word: 'かくめい', reading: 'かくめい', hint: 'しゃかいを大きく変える出来事', difficulty: 2 },
+                    { type: 'both', word: 'ないかく', reading: 'ないかく', hint: '国のせいじを行うだいじんたちの集まり', difficulty: 2 },
+                    { type: 'both', word: 'わりあい', reading: 'わりあい', hint: 'ぜんたいに対する部分のひりつ、パーセント', difficulty: 2 },
+                    { type: 'both', word: 'かぶしき', reading: 'かぶしき', hint: 'かいしゃのしょゆうけんを表すしょうけん', difficulty: 2 },
+                    { type: 'both', word: 'ひがた', reading: 'ひがた', hint: 'しおが引いた時にあらわれる海底', difficulty: 2 },
+                    { type: 'both', word: 'まきもの', reading: 'まきもの', hint: '紙や布を巻いた昔のしょもつ', difficulty: 2 },
+                    { type: 'both', word: 'かんご', reading: 'かんご', hint: 'びょうきの人の世話をする、ケアする', difficulty: 2 },
+                    { type: 'both', word: 'かんたん', reading: 'かんたん', hint: 'やさしい、難しくない', difficulty: 1 },
+                    { type: 'both', word: 'きき', reading: 'きき', hint: 'きけんなじょうきょう、ピンチ', difficulty: 2 },
+                    { type: 'both', word: '机', reading: 'つくえ', hint: 'べんきょうや仕事をする時に使う台', difficulty: 1 },
+                    { type: 'both', word: 'きちょう', reading: 'きちょう', hint: 'とても大切でかちのある', difficulty: 2 },
+                    { type: 'both', word: 'ぎもん', reading: 'ぎもん', hint: '分からないこと、しつもんしたいこと', difficulty: 2 },
+                    { type: 'both', word: 'こきゅう', reading: 'こきゅう', hint: 'いきを吸ったり吐いたりすること', difficulty: 2 },
+                    { type: 'both', word: 'きょうきゅう', reading: 'きょうきゅう', hint: 'ひつようなものをていきょうする、あたえる', difficulty: 2 },
+                    { type: 'both', word: '胸', reading: 'むね', hint: '体の前がわ、しんぞうがある部分', difficulty: 1 },
+                    { type: 'both', word: 'こきょう', reading: 'こきょう', hint: '生まれ育った土地、ふるさと', difficulty: 2 },
+                    { type: 'both', word: 'きんむ', reading: 'きんむ', hint: 'かいしゃやしょくばで働くこと', difficulty: 2 },
+                    { type: 'both', word: 'きんにく', reading: 'きんにく', hint: '体を動かすためのそしき、マッスル', difficulty: 2 },
+                    { type: 'both', word: 'けいとう', reading: 'けいとう', hint: 'つながりのあるなかま、グループ', difficulty: 2 }
+                ]
+            };
+
+            // 全学年の漢字リストを作成
+            for (let i = 1; i <= 6; i++) {
+                allKanjiByGrade[i] = [];
+                for (let j = 1; j <= i; j++) {
+                    if (kanjiDatabase[j] && kanjiDatabase[j].kanjiList) {
+                        allKanjiByGrade[i] = allKanjiByGrade[i].concat(kanjiDatabase[j].kanjiList);
+                    }
+                }
+            }
+        }
+
+        // JSONファイルを読み込む関数
+        function loadKanjiData(grade) {
+            // まずキャッシュをチェック
+            if (kanjiDatabase[grade] && kanjiDatabase[grade].questions.length > 0) {
+                return Promise.resolve(kanjiDatabase[grade]);
+            }
+            
+            // ローカルファイルの場合は埋め込みデータを使用
+            if (window.location.protocol === 'file:') {
+                return loadEmbeddedKanjiData(grade);
+            }
+            
+            // HTTPサーバー経由でJSONファイルから読み込み
+            return fetch('./data/grade' + grade + '.json')
+                .then(function(response) {
+                    if (!response.ok) {
+                        throw new Error('データファイルが見つかりません');
+                    }
+                    return response.json();
+                })
+                .then(function(data) {
+                    // データをキャッシュ
+                    kanjiDatabase[grade] = data;
+                    
+                    // 全学年の漢字リストを更新
+                    updateAllKanjiList(grade, data.kanjiList);
+                    
+                    return data;
+                })
+                .catch(function(error) {
+                    console.error('データ読み込みエラー:', error);
+                    // フォールバック：埋め込みデータを使用
+                    return loadEmbeddedKanjiData(grade);
+                });
+        }
+
+        // 埋め込みデータを読み込む関数
+        function loadEmbeddedKanjiData(grade) {
+            return new Promise(function(resolve, reject) {
+                if (kanjiDatabase[grade]) {
+                    // 全学年の漢字リストを更新
+                    updateAllKanjiList(grade, kanjiDatabase[grade].kanjiList);
+                    resolve(kanjiDatabase[grade]);
+                } else {
+                    reject(new Error('学年データが見つかりません'));
+                }
+            });
+        }
+
+        // 全学年の漢字リストを更新
+        function updateAllKanjiList(grade, kanjiList) {
+            if (!allKanjiByGrade[grade]) {
+                allKanjiByGrade[grade] = [];
+            }
+            
+            // その学年までの全漢字を累積
+            allKanjiByGrade[grade] = [];
+            for (let g = 1; g <= grade; g++) {
+                if (kanjiDatabase[g] && kanjiDatabase[g].kanjiList) {
+                    allKanjiByGrade[grade] = allKanjiByGrade[grade].concat(kanjiDatabase[g].kanjiList);
+                }
+            }
+        }
+
+        // 習った漢字かチェック
+        function isKanjiLearned(kanji, grade) {
+            return allKanjiByGrade[grade] && allKanjiByGrade[grade].indexOf(kanji) !== -1;
+        }
+
+        // 単語を調整（未習得漢字をひらがなに）
+        function adjustWord(word, grade) {
+            let adjusted = '';
+            for (let i = 0; i < word.length; i++) {
+                const char = word[i];
+                if (isKanjiLearned(char, grade) || isHiragana(char) || isKatakana(char)) {
+                    adjusted += char;
+                } else {
+                    adjusted += '？';
+                }
+            }
+            return adjusted;
+        }
+
+        // 学年に応じて漢字を調整（高学年漢字をひらがなに変換）
+        function adjustWordForGrade(text, grade) {
+            if (!text) return '';
+            
+            // 漢字からひらがなへの変換マップ（基本的な変換例）
+            const kanjiToHiragana = {
+                // 高学年でよく使われる漢字の変換例
+                '勉強': 'べんきょう',
+                '運動': 'うんどう',
+                '動物': 'どうぶつ',
+                '植物': 'しょくぶつ',
+                '建物': 'たてもの',
+                '食物': 'しょくもつ',
+                '物語': 'ものがたり',
+                '図書': 'としょ',
+                '音楽': 'おんがく',
+                '美術': 'びじゅつ',
+                '体育': 'たいいく',
+                '理科': 'りか',
+                '社会': 'しゃかい',
+                '算数': 'さんすう',
+                '国語': 'こくご',
+                '英語': 'えいご',
+                '歴史': 'れきし',
+                '地理': 'ちり',
+                '科学': 'かがく',
+                '自然': 'しぜん',
+                '環境': 'かんきょう',
+                '社会': 'しゃかい',
+                '文化': 'ぶんか',
+                '経済': 'けいざい',
+                '政治': 'せいじ',
+                '健康': 'けんこう',
+                '安全': 'あんぜん',
+                '平和': 'へいわ',
+                '幸福': 'こうふく',
+                '希望': 'きぼう',
+                '努力': 'どりょく',
+                '協力': 'きょうりょく',
+                '友情': 'ゆうじょう',
+                '信頼': 'しんらい',
+                '尊敬': 'そんけい'
+            };
+            
+            let adjusted = text;
+            
+            // まず熟語の変換を試行
+            for (let compound in kanjiToHiragana) {
+                adjusted = adjusted.replace(new RegExp(compound, 'g'), kanjiToHiragana[compound]);
+            }
+            
+            // 個別の漢字をチェック
+            let result = '';
+            for (let i = 0; i < adjusted.length; i++) {
+                const char = adjusted[i];
+                if (isKanji(char)) {
+                    // その学年以下で学習済みの漢字かチェック
+                    if (isKanjiLearned(char, grade)) {
+                        result += char;
+                    } else {
+                        // 未学習の漢字は読み方で置換（簡易的な変換）
+                        result += getKanjiReading(char) || char;
+                    }
+                } else {
+                    result += char;
+                }
+            }
+            
+            return result;
+        }
+
+        // 漢字の読み方を取得（簡易版）
+        function getKanjiReading(kanji) {
+            const readings = {
+                '教': 'おし',
+                '授': 'じゅ',
+                '業': 'ぎょう',
+                '課': 'か',
+                '題': 'だい',
+                '問': 'もん',
+                '答': 'こた',
+                '解': 'かい',
+                '説': 'せつ',
+                '明': 'めい',
+                '理': 'り',
+                '由': 'ゆう',
+                '原': 'げん',
+                '因': 'いん',
+                '結': 'けつ',
+                '果': 'か',
+                '効': 'こう',
+                '影': 'えい',
+                '響': 'きょう',
+                '関': 'かん',
+                '係': 'けい',
+                '連': 'れん',
+                '絡': 'らく',
+                '接': 'せつ',
+                '触': 'しょく',
+                '感': 'かん',
+                '想': 'そう',
+                '思': 'おも',
+                '考': 'かんが',
+                '判': 'はん',
+                '断': 'だん',
+                '決': 'き',
+                '定': 'てい',
+                '確': 'たし',
+                '認': 'みと',
+                '証': 'しょう',
+                '実': 'じつ',
+                '際': 'さい',
+                '場': 'ば',
+                '合': 'あい',
+                '状': 'じょう',
+                '況': 'きょう',
+                '情': 'じょう',
+                '報': 'ほう',
+                '知': 'し',
+                '識': 'しき',
+                '技': 'ぎ',
+                '術': 'じゅつ',
+                '能': 'のう',
+                '力': 'りき',
+                '才': 'さい',
+                '能': 'のう',
+                '特': 'とく',
+                '別': 'べつ',
+                '個': 'こ',
+                '性': 'せい',
+                '格': 'かく',
+                '質': 'しつ',
+                '量': 'りょう',
+                '数': 'すう',
+                '値': 'ち',
+                '価': 'か',
+                '費': 'ひ',
+                '用': 'よう',
+                '利': 'り',
+                '益': 'えき',
+                '損': 'そん',
+                '害': 'がい',
+                '危': 'き',
+                '険': 'けん',
+                '注': 'ちゅう',
+                '意': 'い',
+                '集': 'しゅう',
+                '中': 'ちゅう',
+                '心': 'しん',
+                '配': 'はい',
+                '慮': 'りょ'
+            };
+            
+            return readings[kanji] || null;
+        }
+
+        // ひらがな判定
+        function isHiragana(char) {
+            return char >= '\u3040' && char <= '\u309F';
+        }
+
+        // カタカナ判定
+        function isKatakana(char) {
+            return char >= '\u30A0' && char <= '\u30FF';
+        }
+
+        // 問題を生成
+        function generateQuestions(gradeData, grade, mode) {
+            const questions = [];
+            
+            // 選択学年の問題のみを収集（その学年の漢字を必ず使用）
+            const currentGradeQuestions = [];
+            if (kanjiDatabase[grade] && kanjiDatabase[grade].questions) {
+                kanjiDatabase[grade].questions.forEach(function(q) {
+                    if (q.type === 'both' || q.type === mode) {
+                        currentGradeQuestions.push(q);
+                    }
+                });
+            }
+
+            // 利用可能な問題をフィルタリング（選択学年の漢字が含まれているか確認）
+            const availableQuestions = currentGradeQuestions.filter(function(q) {
+                // 選択学年の漢字が含まれているかチェック
+                const targetGradeKanji = kanjiDatabase[grade] ? kanjiDatabase[grade].kanjiList : [];
+                let hasTargetGradeKanji = false;
+                
+                // デバッグ用ログ
+                console.log('問題:', q.word, 'ターゲット学年:', grade, '漢字リスト:', targetGradeKanji.length);
+                
+                for (let char of q.word) {
+                    if (isKanji(char) && targetGradeKanji.indexOf(char) !== -1) {
+                        hasTargetGradeKanji = true;
+                        console.log('該当漢字発見:', char);
+                        break;
+                    }
+                }
+                
+                // 選択学年の漢字が含まれていない場合も、その学年の問題として含める
+                // （熟語や複合語の場合を考慮）
+                if (!hasTargetGradeKanji && targetGradeKanji.length > 0) {
+                    hasTargetGradeKanji = true; // 暫定的に全ての問題を通す
+                }
+                
+                console.log('結果:', hasTargetGradeKanji);
+                return hasTargetGradeKanji;
+            });
+
+            // ランダムに10問選択
+            const shuffled = availableQuestions.sort(function() { return Math.random() - 0.5; });
+            const selected = shuffled.slice(0, Math.min(10, shuffled.length));
+
+            selected.forEach(function(q) {
+                // 関連文の漢字を学年以下に制限（高学年漢字をひらがな表記に変更）
+                const adjustedWord = adjustWordForGrade(q.word, grade);
+                const adjustedHint = adjustWordForGrade(q.hint, grade);
+                
+                if (mode === 'reading') {
+                    questions.push({
+                        type: 'reading',
+                        word: adjustedWord,
+                        reading: q.reading,
+                        hint: adjustedHint,
+                        correctAnswer: q.reading,
+                        choices: generateChoices(q.reading, 'reading')
+                    });
+                } else {
+                    questions.push({
+                        type: 'writing',
+                        word: adjustedWord,
+                        reading: q.reading,
+                        hint: adjustedHint
+                    });
+                }
+            });
+
+            return questions;
+        }
+
+        // 選択肢を生成
+        function generateChoices(correct, type) {
+            const choices = [correct];
+            let dummyOptions = [];
+            
+            if (type === 'reading') {
+                dummyOptions = ['あさ', 'ひる', 'よる', 'そら', 'うみ', 'やま', 'かわ', 'もり', 'はな', 'つち', 'かぜ', 'あめ', 'ゆき', 'くも', 'いけ', 'たに'];
+            }
+            
+            while (choices.length < 4) {
+                const dummy = dummyOptions[Math.floor(Math.random() * dummyOptions.length)];
+                if (choices.indexOf(dummy) === -1) {
+                    choices.push(dummy);
+                }
+            }
+            
+            return choices.sort(function() { return Math.random() - 0.5; });
+        }
+
+        // 学年選択
+        document.querySelectorAll('.grade-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                currentGrade = parseInt(this.dataset.grade);
+                
+                document.querySelectorAll('.grade-btn').forEach(function(b) {
+                    b.classList.remove('active');
+                });
+                
+                this.classList.add('active');
+                
+                // モード選択画面を表示
+                document.getElementById('gradeSelector').style.display = 'none';
+                document.getElementById('modeSelector').style.display = 'block';
+            });
+        });
+
+        // モード選択
+        document.querySelectorAll('.mode-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                currentMode = this.dataset.mode;
+                
+                document.querySelectorAll('.mode-btn').forEach(function(b) {
+                    b.classList.remove('active');
+                });
+                
+                this.classList.add('active');
+                startQuiz();
+            });
+        });
+
+        // クイズ開始
+        function startQuiz() {
+            document.getElementById('modeSelector').style.display = 'none';
+            document.getElementById('loader').style.display = 'block';
+            
+            loadKanjiData(currentGrade).then(function(gradeData) {
+                if (!gradeData) {
+                    showErrorMessage('この学年のデータはまだ準備中です。');
+                    return;
+                }
+                
+                currentQuestions = generateQuestions(gradeData, currentGrade, currentMode);
+                
+                if (currentQuestions.length === 0) {
+                    showErrorMessage('問題を生成できませんでした。');
+                    return;
+                }
+                
+                currentQuestionIndex = 0;
+                score = 0;
+                
+                document.getElementById('loader').style.display = 'none';
+                document.getElementById('quizContainer').style.display = 'block';
+                showQuestion();
+            });
+        }
+
+        // 問題表示
+        function showQuestion() {
+            const question = currentQuestions[currentQuestionIndex];
+            
+            // 問題番号を更新
+            document.getElementById('questionCounter').textContent = 
+                (currentQuestionIndex + 1) + ' / ' + currentQuestions.length;
+            
+            if (currentMode === 'reading') {
+                // 読みテストモード
+                document.getElementById('questionText').style.display = 'block';
+                document.getElementById('questionText').textContent = question.word;
+                document.getElementById('readingText').style.display = 'block';
+                document.getElementById('readingText').textContent = 'この漢字の読み方は？';
+                if (question.hint) {
+                    document.getElementById('readingText').textContent += ' （ヒント: ' + question.hint + '）';
+                }
+                
+                document.getElementById('writingSection').style.display = 'none';
+                document.getElementById('choices').style.display = 'grid';
+                
+                const choicesContainer = document.getElementById('choices');
+                choicesContainer.innerHTML = '';
+                
+                question.choices.forEach(function(choice) {
+                    const btn = document.createElement('button');
+                    btn.className = 'choice-btn';
+                    btn.textContent = choice;
+                    btn.onclick = function() { checkAnswer(choice, btn); };
+                    choicesContainer.appendChild(btn);
+                });
+            } else {
+                // 書きテストモード
+                document.getElementById('questionText').style.display = 'none';
+                document.getElementById('readingText').style.display = 'none';
+                document.getElementById('choices').style.display = 'none';
+                document.getElementById('writingSection').style.display = 'block';
+                
+                document.getElementById('writingDisplay').textContent = question.reading;
+                
+                // ヒントを表示
+                if (question.hint) {
+                    document.getElementById('writingHint').textContent = 'ヒント: ' + question.hint;
+                    document.getElementById('writingHint').style.display = 'block';
+                } else {
+                    document.getElementById('writingHint').style.display = 'none';
+                }
+                
+                document.getElementById('answerDisplay').textContent = question.word;
+                document.getElementById('answerDisplay').style.display = 'none';
+                
+                // 自己採点ボタンをリセット
+                document.querySelectorAll('.check-btn').forEach(function(btn) {
+                    btn.disabled = false;
+                });
+            }
+            
+            // プログレスバー更新
+            const progress = ((currentQuestionIndex + 1) / currentQuestions.length) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        // 答え合わせ（読みテスト用）
+        function checkAnswer(answer, btn) {
+            const question = currentQuestions[currentQuestionIndex];
+            const buttons = document.querySelectorAll('.choice-btn');
+            
+            buttons.forEach(function(b) { 
+                b.style.pointerEvents = 'none';
+                b.disabled = true;
+            });
+            
+            if (answer === question.correctAnswer) {
+                btn.classList.add('correct');
+                score++;
+            } else {
+                btn.classList.add('incorrect');
+                buttons.forEach(function(b) {
+                    if (b.textContent === question.correctAnswer) {
+                        b.classList.add('correct');
+                    }
+                });
+            }
+            
+            setTimeout(function() {
+                currentQuestionIndex++;
+                if (currentQuestionIndex < currentQuestions.length) {
+                    showQuestion();
+                } else {
+                    showResult();
+                }
+            }, 1500);
+        }
+
+        // 結果表示
+        function showResult() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.getElementById('result').style.display = 'block';
+            
+            const percentage = Math.round((score / currentQuestions.length) * 100);
+            let message = score + ' / ' + currentQuestions.length + ' (' + percentage + '%)';
+            
+            if (percentage === 100) {
+                message += '\n🎉 完璧です！';
+            } else if (percentage >= 80) {
+                message += '\n😊 よくできました！';
+            } else if (percentage >= 60) {
+                message += '\n🙂 がんばりました！';
+            } else {
+                message += '\n💪 もう一度挑戦しよう！';
+            }
+            
+            document.getElementById('score').innerHTML = message.replace(/\n/g, '<br>');
+        }
+
+        // アプリ初期化
+        window.addEventListener('DOMContentLoaded', function() {
+            initializeSampleData();
+        });
+
+        // 管理画面関連の関数
+        function showAdminPanel() {
+            document.getElementById('adminPanel').style.display = 'flex';
+            showQuestionList(); // 初期表示
+        }
+
+        function hideAdminPanel() {
+            document.getElementById('adminPanel').style.display = 'none';
+        }
+
+        function showAdminTab(tabName) {
+            // すべてのタブを非表示
+            document.querySelectorAll('.admin-content').forEach(function(content) {
+                content.style.display = 'none';
+            });
+            document.querySelectorAll('.admin-tab').forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+
+            // 選択されたタブを表示
+            document.getElementById('admin' + tabName.charAt(0).toUpperCase() + tabName.slice(1)).style.display = 'block';
+            event.target.classList.add('active');
+
+            if (tabName === 'view') {
+                showQuestionList();
+            }
+        }
+
+        function addQuestion() {
+            const grade = parseInt(document.getElementById('addGrade').value);
+            const word = document.getElementById('addWord').value.trim();
+            const reading = document.getElementById('addReading').value.trim();
+            const hint = document.getElementById('addHint').value.trim();
+            const type = document.getElementById('addType').value;
+            const difficulty = parseInt(document.getElementById('addDifficulty').value);
+
+            const resultDiv = document.getElementById('addResult');
+
+            // バリデーション
+            if (!word || !reading || !hint) {
+                showAddResult('すべての項目を入力してください。', 'error');
+                return;
+            }
+
+            // 新しい問題オブジェクト
+            const newQuestion = {
+                type: type,
+                word: word,
+                reading: reading,
+                hint: hint,
+                difficulty: difficulty
+            };
+
+            // データベースに追加
+            if (!kanjiDatabase[grade]) {
+                kanjiDatabase[grade] = {
+                    grade: grade,
+                    kanjiList: [],
+                    questions: []
+                };
+            }
+
+            kanjiDatabase[grade].questions.push(newQuestion);
+
+            // 漢字リストを更新（新しい漢字が含まれている場合）
+            for (let char of word) {
+                if (isKanji(char) && kanjiDatabase[grade].kanjiList.indexOf(char) === -1) {
+                    kanjiDatabase[grade].kanjiList.push(char);
+                }
+            }
+
+            // フォームをクリア
+            document.getElementById('addWord').value = '';
+            document.getElementById('addReading').value = '';
+            document.getElementById('addHint').value = '';
+
+            showAddResult('問題を追加しました！', 'success');
+
+            // ローカルストレージに保存
+            saveToLocalStorage(grade);
+        }
+
+        function showAddResult(message, type) {
+            const resultDiv = document.getElementById('addResult');
+            resultDiv.textContent = message;
+            resultDiv.className = 'add-result ' + type;
+            resultDiv.style.display = 'block';
+
+            setTimeout(function() {
+                resultDiv.style.display = 'none';
+            }, 3000);
+        }
+
+        function showQuestionList() {
+            const grade = parseInt(document.getElementById('viewGrade').value);
+            const listDiv = document.getElementById('questionList');
+
+            if (!kanjiDatabase[grade] || !kanjiDatabase[grade].questions) {
+                listDiv.innerHTML = '<p>この学年の問題データがありません。</p>';
+                return;
+            }
+
+            const questions = kanjiDatabase[grade].questions;
+            if (questions.length === 0) {
+                listDiv.innerHTML = '<p>まだ問題が登録されていません。</p>';
+                return;
+            }
+
+            let html = '<h3>' + grade + '年生の問題一覧 (' + questions.length + '問)</h3>';
+            questions.forEach(function(q, index) {
+                html += '<div class="question-item">';
+                html += '<h4>' + q.word + ' (' + q.reading + ')</h4>';
+                html += '<p><strong>ヒント:</strong> ' + q.hint + '</p>';
+                html += '<p><strong>タイプ:</strong> ' + getTypeText(q.type) + ' | ';
+                html += '<strong>難易度:</strong> ' + getDifficultyText(q.difficulty) + '</p>';
+                html += '</div>';
+            });
+
+            listDiv.innerHTML = html;
+        }
+
+        function getTypeText(type) {
+            switch(type) {
+                case 'both': return '読み・書き両方';
+                case 'reading': return '読みテストのみ';
+                case 'writing': return '書きテストのみ';
+                default: return '不明';
+            }
+        }
+
+        function getDifficultyText(difficulty) {
+            switch(difficulty) {
+                case 1: return '簡単';
+                case 2: return '普通';
+                case 3: return '難しい';
+                default: return '普通';
+            }
+        }
+
+        function importQuestions() {
+            const data = document.getElementById('importData').value.trim();
+            const resultDiv = document.getElementById('importResult');
+
+            if (!data) {
+                showImportResult('JSONデータを入力してください。', 'error');
+                return;
+            }
+
+            try {
+                const jsonData = JSON.parse(data);
+                
+                if (!jsonData.grade || !jsonData.questions) {
+                    throw new Error('正しいフォーマットではありません');
+                }
+
+                const grade = jsonData.grade;
+                
+                // 既存データと統合
+                if (!kanjiDatabase[grade]) {
+                    kanjiDatabase[grade] = {
+                        grade: grade,
+                        kanjiList: [],
+                        questions: []
+                    };
+                }
+
+                // 問題を追加
+                jsonData.questions.forEach(function(q) {
+                    kanjiDatabase[grade].questions.push(q);
+                });
+
+                // 漢字リストを更新
+                if (jsonData.kanjiList) {
+                    jsonData.kanjiList.forEach(function(kanji) {
+                        if (kanjiDatabase[grade].kanjiList.indexOf(kanji) === -1) {
+                            kanjiDatabase[grade].kanjiList.push(kanji);
+                        }
+                    });
+                }
+
+                // ローカルストレージに保存
+                saveToLocalStorage(grade);
+
+                showImportResult(jsonData.questions.length + '問を取り込みました。', 'success');
+                document.getElementById('importData').value = '';
+
+            } catch (error) {
+                showImportResult('JSONデータの形式が正しくありません: ' + error.message, 'error');
+            }
+        }
+
+        function showImportResult(message, type) {
+            const resultDiv = document.getElementById('importResult');
+            resultDiv.textContent = message;
+            resultDiv.className = 'import-result ' + type;
+            resultDiv.style.display = 'block';
+
+            setTimeout(function() {
+                resultDiv.style.display = 'none';
+            }, 5000);
+        }
+
+        function exportQuestions() {
+            const grade = parseInt(document.getElementById('exportGrade').value);
+            const exportArea = document.getElementById('exportData');
+
+            if (!kanjiDatabase[grade] || !kanjiDatabase[grade].questions) {
+                exportArea.value = '{"error": "この学年のデータがありません"}';
+                return;
+            }
+
+            const exportData = {
+                grade: grade,
+                totalKanji: kanjiDatabase[grade].kanjiList ? kanjiDatabase[grade].kanjiList.length : 0,
+                kanjiList: kanjiDatabase[grade].kanjiList || [],
+                questions: kanjiDatabase[grade].questions
+            };
+
+            exportArea.value = JSON.stringify(exportData, null, 2);
+        }
+
+        function isKanji(char) {
+            return (char >= '\u4e00' && char <= '\u9faf') || 
+                   (char >= '\u3400' && char <= '\u4dbf');
+        }
+
+        function saveToLocalStorage(grade) {
+            try {
+                localStorage.setItem('kanjiQuiz_grade' + grade, JSON.stringify(kanjiDatabase[grade]));
+            } catch (error) {
+                console.warn('ローカルストレージへの保存に失敗しました:', error);
+            }
+        }
+
+        function loadFromLocalStorage() {
+            for (let grade = 1; grade <= 6; grade++) {
+                try {
+                    const stored = localStorage.getItem('kanjiQuiz_grade' + grade);
+                    if (stored) {
+                        const data = JSON.parse(stored);
+                        // 既存のサンプルデータと統合
+                        if (kanjiDatabase[grade]) {
+                            // 追加された問題をマージ
+                            data.questions.forEach(function(q) {
+                                const exists = kanjiDatabase[grade].questions.some(function(existing) {
+                                    return existing.word === q.word && existing.reading === q.reading;
+                                });
+                                if (!exists) {
+                                    kanjiDatabase[grade].questions.push(q);
+                                }
+                            });
+                        } else {
+                            kanjiDatabase[grade] = data;
+                        }
+                    }
+                } catch (error) {
+                    console.warn('学年' + grade + 'のデータ読み込みに失敗:', error);
+                }
+            }
+        }
+
+        // モーダルオーバーレイクリック時の処理
+        document.getElementById('modalOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                hideModal();
+            }
+        });
+
+        // PWA対応
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(function() {
+                // Service Worker登録失敗時は何もしない
+            });
+        }
+    </script>
+</body>
+</html>

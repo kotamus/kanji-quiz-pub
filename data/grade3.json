@@ -1,0 +1,847 @@
+{
+  "grade": 3,
+  "totalKanji": 200,
+  "kanjiList": [
+    "悪", "安", "暗", "医", "委", "意", "育", "員", "院", "飲",
+    "運", "泳", "駅", "央", "横", "屋", "温", "化", "荷", "界",
+    "開", "階", "寒", "感", "漢", "館", "岸", "起", "期", "客",
+    "究", "急", "級", "宮", "球", "去", "橋", "業", "曲", "局",
+    "銀", "区", "苦", "具", "君", "係", "軽", "血", "決", "研",
+    "県", "庫", "湖", "向", "幸", "港", "号", "根", "祭", "皿",
+    "仕", "死", "使", "始", "指", "歯", "詩", "次", "事", "持",
+    "式", "実", "写", "者", "主", "守", "取", "酒", "受", "州",
+    "拾", "終", "習", "集", "住", "重", "宿", "所", "暑", "助",
+    "昭", "消", "商", "章", "勝", "乗", "植", "申", "身", "神",
+    "真", "深", "進", "世", "整", "昔", "全", "相", "送", "想",
+    "息", "速", "族", "他", "打", "対", "待", "代", "第", "題",
+    "炭", "短", "談", "着", "注", "柱", "丁", "帳", "調", "追",
+    "定", "庭", "笛", "鉄", "転", "都", "度", "投", "豆", "島",
+    "湯", "登", "等", "動", "童", "農", "波", "配", "倍", "畑",
+    "発", "反", "坂", "板", "皮", "悲", "美", "鼻", "筆", "氷",
+    "表", "秒", "病", "品", "負", "部", "服", "福", "物", "平",
+    "返", "勉", "放", "味", "命", "面", "問", "役", "薬", "由",
+    "油", "有", "遊", "予", "羊", "洋", "葉", "陽", "様", "落",
+    "流", "旅", "両", "緑", "礼", "列", "練", "路", "和", "悪"
+  ],
+  "questions": [
+    {
+      "type": "both",
+      "word": "宿題",
+      "reading": "しゅくだい",
+      "hint": "学校で出される、家でやる勉強",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "委員",
+      "reading": "いいん",
+      "hint": "クラスのみんなのためにお仕事をする人",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "図書館",
+      "reading": "としょかん",
+      "hint": "本がたくさんある、勉強や読書をする建物",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "運動",
+      "reading": "うんどう",
+      "hint": "体を動かすこと、走ったり跳んだりする",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "泳ぐ",
+      "reading": "およぐ",
+      "hint": "水の中を進む、プールや海でする",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "駅",
+      "reading": "えき",
+      "hint": "電車に乗る場所、切符を買うところ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "横断歩道",
+      "reading": "おうだんほどう",
+      "hint": "道を渡る白いしま模様、信号を守って渡る",
+      "difficulty": 3
+    },
+    {
+      "type": "both",
+      "word": "温度",
+      "reading": "おんど",
+      "hint": "あつさやさむさを数字で表したもの",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "化学",
+      "reading": "かがく",
+      "hint": "物質や実験について学ぶ、理科の一分野",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "開始",
+      "reading": "かいし",
+      "hint": "始まること、スタートすること",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "階段",
+      "reading": "かいだん",
+      "hint": "上の階に上がる、段になっている道",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "寒い",
+      "reading": "さむい",
+      "hint": "冬の外のようす、コートが必要な天気",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "感じる",
+      "reading": "かんじる",
+      "hint": "心や体で何かを知る、気持ちを持つ",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "漢字",
+      "reading": "かんじ",
+      "hint": "中国から来た文字、今勉強している字",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "岸",
+      "reading": "きし",
+      "hint": "海や川のはじっこ、水際のところ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "起きる",
+      "reading": "おきる",
+      "hint": "朝ベッドから出る、眠りから目覚める",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "期間",
+      "reading": "きかん",
+      "hint": "始まりから終わりまでの時間",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "究める",
+      "reading": "きわめる",
+      "hint": "とことん調べる、深く研究する",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "急ぐ",
+      "reading": "いそぐ",
+      "hint": "速く行動する、遅刻しそうなときにする",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "級",
+      "reading": "きゅう",
+      "hint": "段階や等級、漢字検定の○級",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "宮殿",
+      "reading": "きゅうでん",
+      "hint": "王様や皇室が住む立派な建物",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "球",
+      "reading": "きゅう",
+      "hint": "まん丸な形、野球やサッカーボール",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "橋",
+      "reading": "はし",
+      "hint": "川や道路の上を渡る、つなぐもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "業務",
+      "reading": "ぎょうむ",
+      "hint": "仕事や作業、やるべきこと",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "曲",
+      "reading": "きょく",
+      "hint": "音楽の歌、メロディーがあるもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "銀行",
+      "reading": "ぎんこう",
+      "hint": "お金を預ける建物、ATMがある場所",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "区域",
+      "reading": "くいき",
+      "hint": "決められた範囲、地区や地域",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "苦しい",
+      "reading": "くるしい",
+      "hint": "辛い、困っている、大変な状態",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "道具",
+      "reading": "どうぐ",
+      "hint": "何かをするときに使うもの、工具や用具",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "君",
+      "reading": "きみ",
+      "hint": "友達を呼ぶとき、男の子に使う言葉",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "係",
+      "reading": "かかり",
+      "hint": "クラスの仕事をする人、給食係など",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "軽い",
+      "reading": "かるい",
+      "hint": "重くない、持ち上げやすい",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "血",
+      "reading": "ち",
+      "hint": "体の中を流れる赤い液体",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "決める",
+      "reading": "きめる",
+      "hint": "選ぶ、はっきりさせる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "研究",
+      "reading": "けんきゅう",
+      "hint": "深く調べて学ぶ、実験や観察をする",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "県",
+      "reading": "けん",
+      "hint": "日本の47の地域、○○県",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "湖",
+      "reading": "みずうみ",
+      "hint": "山に囲まれた大きな水、琵琶湖など",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "向かう",
+      "reading": "むかう",
+      "hint": "目的地に向けて進む、行く",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "幸せ",
+      "reading": "しあわせ",
+      "hint": "うれしい気持ち、楽しい状態",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "港",
+      "reading": "みなと",
+      "hint": "船が着く場所、海の玄関口",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "号",
+      "reading": "ごう",
+      "hint": "順番や番号、第○号",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "祭り",
+      "reading": "まつり",
+      "hint": "神社やお寺のお祝い、おみこしや屋台",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "皿",
+      "reading": "さら",
+      "hint": "食べ物を盛る平たい器",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "仕事",
+      "reading": "しごと",
+      "hint": "大人がお金をもらってすること",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "使う",
+      "reading": "つかう",
+      "hint": "道具や物を役立てる、利用する",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "始める",
+      "reading": "はじめる",
+      "hint": "スタートする、新しく何かを開始する",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "指",
+      "reading": "ゆび",
+      "hint": "手の先にある5本のもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "歯",
+      "reading": "は",
+      "hint": "口の中にある白いもの、食べ物を噛む",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "詩",
+      "reading": "し",
+      "hint": "美しい言葉で気持ちを表した文",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "事件",
+      "reading": "じけん",
+      "hint": "大きな出来事、ニュースになること",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "持つ",
+      "reading": "もつ",
+      "hint": "手に取る、所有する",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "式",
+      "reading": "しき",
+      "hint": "入学式や卒業式、大切な行事",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "実験",
+      "reading": "じっけん",
+      "hint": "理科で試してみる、結果を調べる",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "写真",
+      "reading": "しゃしん",
+      "hint": "カメラで撮った画像、思い出を残すもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "主人",
+      "reading": "しゅじん",
+      "hint": "家の中心人物、ご主人様",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "取る",
+      "reading": "とる",
+      "hint": "手でつかむ、獲得する",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "受ける",
+      "reading": "うける",
+      "hint": "もらう、テストを受ける",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "集める",
+      "reading": "あつめる",
+      "hint": "いろいろな物を一つにまとめる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "住む",
+      "reading": "すむ",
+      "hint": "家に暮らす、生活する",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "重い",
+      "reading": "おもい",
+      "hint": "持ち上げにくい、軽くない",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "終わる",
+      "reading": "おわる",
+      "hint": "最後になる、完了する",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "暑い",
+      "reading": "あつい",
+      "hint": "夏の昼間のよう、汗をかく天気",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "助ける",
+      "reading": "たすける",
+      "hint": "困っている人を手伝う、救う",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "商店",
+      "reading": "しょうてん",
+      "hint": "物を売る店、商売をする場所",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "勝つ",
+      "reading": "かつ",
+      "hint": "試合やゲームで一番になる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "乗る",
+      "reading": "のる",
+      "hint": "電車やバスに入る、上に上がる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "植物",
+      "reading": "しょくぶつ",
+      "hint": "花や木、草などの生き物",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "身体",
+      "reading": "しんたい",
+      "hint": "人間の体全体、からだ",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "神社",
+      "reading": "じんじゃ",
+      "hint": "神様を祭る場所、鳥居がある",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "深い",
+      "reading": "ふかい",
+      "hint": "底まで遠い、よく考えられている",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "世界",
+      "reading": "せかい",
+      "hint": "地球全体、すべての国",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "全部",
+      "reading": "ぜんぶ",
+      "hint": "すべて、残らず全て",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "送る",
+      "reading": "おくる",
+      "hint": "手紙や荷物を届ける、プレゼントする",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "速い",
+      "reading": "はやい",
+      "hint": "時間が短い、すぐに進む",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "打つ",
+      "reading": "うつ",
+      "hint": "たたく、野球でボールを打つ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "待つ",
+      "reading": "まつ",
+      "hint": "来るまでそこにいる、時間を過ごす",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "短い",
+      "reading": "みじかい",
+      "hint": "長さが少ない、時間がすぐ終わる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "着る",
+      "reading": "きる",
+      "hint": "服を身につける、洋服を着る",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "注意",
+      "reading": "ちゅうい",
+      "hint": "気をつける、よく見て確かめる",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "調べる",
+      "reading": "しらべる",
+      "hint": "詳しく見る、辞書で調べる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "定規",
+      "reading": "じょうぎ",
+      "hint": "まっすぐな線を引く道具、長さを測る",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "庭",
+      "reading": "にわ",
+      "hint": "家の外の空間、花や木がある場所",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "鉄",
+      "reading": "てつ",
+      "hint": "強い金属、電車のレールの材料",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "都市",
+      "reading": "とし",
+      "hint": "大きな町、たくさんの人が住む場所",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "島",
+      "reading": "しま",
+      "hint": "海に囲まれた陸地、日本も島国",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "登る",
+      "reading": "のぼる",
+      "hint": "山や階段を上に向かって進む",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "動物",
+      "reading": "どうぶつ",
+      "hint": "犬や猫、ライオンなどの生き物",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "農業",
+      "reading": "のうぎょう",
+      "hint": "米や野菜を作る仕事",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "畑",
+      "reading": "はたけ",
+      "hint": "野菜や花を育てる土地",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "発表",
+      "reading": "はっぴょう",
+      "hint": "みんなの前で話す、調べたことを伝える",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "坂",
+      "reading": "さか",
+      "hint": "斜めになった道、上り坂や下り坂",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "悲しい",
+      "reading": "かなしい",
+      "hint": "涙が出る気持ち、嬉しくない",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "美しい",
+      "reading": "うつくしい",
+      "hint": "きれいで心がうきうきする",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "筆",
+      "reading": "ふで",
+      "hint": "習字で使う、毛でできた道具",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "氷",
+      "reading": "こおり",
+      "hint": "水が凍ったもの、透明で冷たい",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "病院",
+      "reading": "びょういん",
+      "hint": "病気やけがを治してくれる建物",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "負ける",
+      "reading": "まける",
+      "hint": "試合やゲームで勝てない",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "部屋",
+      "reading": "へや",
+      "hint": "家の中の空間、寝室やリビング",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "服",
+      "reading": "ふく",
+      "hint": "着るもの、洋服や和服",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "物語",
+      "reading": "ものがたり",
+      "hint": "本に書かれた話、昔話など",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "勉強",
+      "reading": "べんきょう",
+      "hint": "学校で学ぶ、宿題をする",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "味",
+      "reading": "あじ",
+      "hint": "食べ物の甘さやしょっぱさ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "命",
+      "reading": "いのち",
+      "hint": "生きている大切なもの、生命",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "問題",
+      "reading": "もんだい",
+      "hint": "テストに出る、答えを考えるもの",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "薬",
+      "reading": "くすり",
+      "hint": "病気を治すもの、苦いことが多い",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "油",
+      "reading": "あぶら",
+      "hint": "料理に使う、てんぷらを揚げるもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "遊ぶ",
+      "reading": "あそぶ",
+      "hint": "楽しい時間を過ごす、友達と一緒に",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "羊",
+      "reading": "ひつじ",
+      "hint": "もこもこの毛がある動物、メエと鳴く",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "葉",
+      "reading": "はっぱ",
+      "hint": "木や草の緑の部分、秋に色が変わる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "陽",
+      "reading": "ひ",
+      "hint": "太陽の光、お日様",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "落ちる",
+      "reading": "おちる",
+      "hint": "上から下に下がる、りんごが木から落ちる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "流れる",
+      "reading": "ながれる",
+      "hint": "水が川を進む、音楽が流れる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "緑",
+      "reading": "みどり",
+      "hint": "葉っぱの色、森の色",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "練習",
+      "reading": "れんしゅう",
+      "hint": "上手になるために繰り返しする",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "路",
+      "reading": "みち",
+      "hint": "人や車が通る道、道路",
+      "difficulty": 1
+    }
+  ],
+  "wordCategories": {
+    "school": ["宿", "題", "委", "員", "図", "書", "館", "研", "究", "実", "験", "勉", "強", "漢", "字", "習", "問", "題", "発", "表", "練", "習"],
+    "nature": ["湖", "岸", "島", "坂", "庭", "畑", "氷", "葉", "陽", "緑", "羊", "流", "落"],
+    "body": ["指", "歯", "血", "身", "体", "鼻", "命"],
+    "time": ["期", "間", "始", "終", "速", "短", "昔"],
+    "action": ["泳", "起", "急", "決", "使", "始", "持", "取", "受", "集", "住", "助", "打", "送", "着", "調", "登", "負", "遊", "落", "流"],
+    "places": ["駅", "階", "段", "橋", "銀", "行", "港", "病", "院", "商", "店", "神", "社", "都", "市", "部", "屋"],
+    "things": ["球", "道", "具", "皿", "式", "写", "真", "筆", "薬", "油", "服", "物", "語"],
+    "feelings": ["幸", "苦", "悲", "美", "感"],
+    "directions": ["向", "横", "深", "全", "重", "軽", "暑", "寒"],
+    "colors": ["銀", "緑"],
+    "numbers": ["第", "号", "倍", "度", "等", "級"],
+    "work": ["仕", "事", "業", "務", "農", "業", "係", "役", "君", "主", "客"]
+  }
+}

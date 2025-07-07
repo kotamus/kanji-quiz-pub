@@ -1,0 +1,1309 @@
+{
+  "grade": 6,
+  "totalKanji": 191,
+  "kanjiList": [
+    "胃", "異", "遺", "域", "宇", "映", "延", "沿", "恩", "我",
+    "灰", "拡", "革", "閣", "割", "株", "干", "巻", "看", "簡",
+    "危", "机", "揮", "貴", "疑", "吸", "供", "胸", "郷", "勤",
+    "筋", "系", "敬", "警", "劇", "激", "穴", "券", "絹", "権",
+    "憲", "源", "厳", "己", "呼", "誤", "后", "孝", "皇", "紅",
+    "降", "鋼", "刻", "穀", "骨", "困", "砂", "座", "済", "裁",
+    "策", "冊", "蚕", "至", "私", "姿", "視", "詞", "誌", "磁",
+    "射", "捨", "尺", "若", "樹", "収", "宗", "就", "衆", "従",
+    "縦", "縮", "熟", "純", "処", "署", "諸", "除", "承", "将",
+    "傷", "障", "蒸", "針", "仁", "垂", "推", "寸", "盛", "聖",
+    "誠", "舌", "宣", "専", "泉", "洗", "染", "銭", "善", "奏",
+    "窓", "創", "装", "層", "操", "蔵", "臓", "存", "尊", "退",
+    "宅", "担", "探", "誕", "段", "暖", "値", "宙", "忠", "著",
+    "庁", "頂", "腸", "潮", "賃", "痛", "敵", "展", "討", "党",
+    "糖", "届", "難", "乳", "認", "納", "脳", "派", "拝", "背",
+    "肺", "俳", "班", "晩", "否", "批", "秘", "俵", "腹", "奮",
+    "並", "陛", "閉", "片", "補", "暮", "宝", "訪", "亡", "忘",
+    "棒", "枚", "幕", "密", "盟", "模", "訳", "郵", "優", "預",
+    "幼", "欲", "翌", "乱", "卵", "覧", "裏", "律", "臨", "朗",
+    "論"
+  ],
+  "questions": [
+    {
+      "type": "both",
+      "word": "異常",
+      "reading": "いじょう",
+      "hint": "普通と違う、おかしな状態",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "遺跡",
+      "reading": "いせき",
+      "hint": "昔の人が残した建物や道具の跡",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "地域",
+      "reading": "ちいき",
+      "hint": "ある範囲の土地、地区",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "宇宙",
+      "reading": "うちゅう",
+      "hint": "地球の外の無限に広がる空間",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "映画",
+      "reading": "えいが",
+      "hint": "スクリーンに映る動く絵、ムービー",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "延長",
+      "reading": "えんちょう",
+      "hint": "時間や長さを伸ばす、長くする",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "沿岸",
+      "reading": "えんがん",
+      "hint": "海や川の岸に沿った地域",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "恩恵",
+      "reading": "おんけい",
+      "hint": "受けた親切や恵み、ありがたいこと",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "自我",
+      "reading": "じが",
+      "hint": "自分という意識、自己",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "灰色",
+      "reading": "はいいろ",
+      "hint": "白と黒の中間の色、グレー",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "拡大",
+      "reading": "かくだい",
+      "hint": "大きくする、広げる",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "革命",
+      "reading": "かくめい",
+      "hint": "社会を大きく変える出来事",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "内閣",
+      "reading": "ないかく",
+      "hint": "国の政治を行う大臣たちの集まり",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "割合",
+      "reading": "わりあい",
+      "hint": "全体に対する部分の比率、パーセント",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "株式",
+      "reading": "かぶしき",
+      "hint": "会社の所有権を表す証券",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "干潟",
+      "reading": "ひがた",
+      "hint": "潮が引いた時に現れる海底",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "巻物",
+      "reading": "まきもの",
+      "hint": "紙や布を巻いた昔の書物",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "看護",
+      "reading": "かんご",
+      "hint": "病気の人の世話をする、ケアする",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "簡単",
+      "reading": "かんたん",
+      "hint": "易しい、難しくない",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "危機",
+      "reading": "きき",
+      "hint": "危険な状況、ピンチ",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "机",
+      "reading": "つくえ",
+      "hint": "勉強や仕事をする時に使う台",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "貴重",
+      "reading": "きちょう",
+      "hint": "とても大切で価値のある",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "疑問",
+      "reading": "ぎもん",
+      "hint": "分からないこと、質問したいこと",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "呼吸",
+      "reading": "こきゅう",
+      "hint": "息を吸ったり吐いたりすること",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "供給",
+      "reading": "きょうきゅう",
+      "hint": "必要なものを提供する、与える",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "胸",
+      "reading": "むね",
+      "hint": "体の前側、心臓がある部分",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "故郷",
+      "reading": "こきょう",
+      "hint": "生まれ育った土地、ふるさと",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "勤務",
+      "reading": "きんむ",
+      "hint": "会社や職場で働くこと",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "筋肉",
+      "reading": "きんにく",
+      "hint": "体を動かすための組織、マッスル",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "系統",
+      "reading": "けいとう",
+      "hint": "つながりのある仲間、グループ",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "尊敬",
+      "reading": "そんけい",
+      "hint": "立派だと思って敬う気持ち",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "警察",
+      "reading": "けいさつ",
+      "hint": "治安を守る、犯罪を取り締まる組織",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "演劇",
+      "reading": "えんげき",
+      "hint": "舞台で演技をする芸術、お芝居",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "激しい",
+      "reading": "はげしい",
+      "hint": "勢いが強い、荒々しい",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "洞穴",
+      "reading": "ほらあな",
+      "hint": "山や地中にある空洞、ほら穴",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "絹糸",
+      "reading": "きぬいと",
+      "hint": "蚕から作られる高級な糸",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "権利",
+      "reading": "けんり",
+      "hint": "正当に主張できること、権限",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "憲法",
+      "reading": "けんぽう",
+      "hint": "国の最も基本的な法律",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "水源",
+      "reading": "すいげん",
+      "hint": "水の出どころ、川の始まり",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "厳格",
+      "reading": "げんかく",
+      "hint": "きびしくて正確、ルールを守る",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "自己",
+      "reading": "じこ",
+      "hint": "自分自身、自らのこと",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "呼び出し",
+      "reading": "よびだし",
+      "hint": "来てもらうよう声をかける",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "誤解",
+      "reading": "ごかい",
+      "hint": "間違って理解する、勘違い",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "皇后",
+      "reading": "こうごう",
+      "hint": "天皇の奥さん、皇室の女性",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "孝行",
+      "reading": "こうこう",
+      "hint": "親に優しくすること、親孝行",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "天皇",
+      "reading": "てんのう",
+      "hint": "日本の象徴、皇室の長",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "紅葉",
+      "reading": "こうよう",
+      "hint": "秋に葉が赤や黄色に変わること",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "降雨",
+      "reading": "こうう",
+      "hint": "雨が降ること、降水",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "鋼鉄",
+      "reading": "こうてつ",
+      "hint": "とても硬い金属、スチール",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "刻印",
+      "reading": "こくいん",
+      "hint": "彫って文字や絵を入れること",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "穀物",
+      "reading": "こくもつ",
+      "hint": "米や麦などの食用作物",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "骨格",
+      "reading": "こっかく",
+      "hint": "体を支える骨の組み立て",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "困難",
+      "reading": "こんなん",
+      "hint": "難しくて大変なこと、苦労",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "砂漠",
+      "reading": "さばく",
+      "hint": "雨が少なく砂だらけの土地",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "座席",
+      "reading": "ざせき",
+      "hint": "座る場所、いす",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "経済",
+      "reading": "けいざい",
+      "hint": "お金や物のやりとり、エコノミー",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "裁判",
+      "reading": "さいばん",
+      "hint": "裁判所で正しいか判断すること",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "政策",
+      "reading": "せいさく",
+      "hint": "政府が決める方針、政治のやり方",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "冊子",
+      "reading": "さっし",
+      "hint": "薄い本、パンフレット",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "養蚕",
+      "reading": "ようさん",
+      "hint": "蚕を育てて絹を作る産業",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "至急",
+      "reading": "しきゅう",
+      "hint": "とても急いで、すぐに",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "私立",
+      "reading": "しりつ",
+      "hint": "個人や団体が設立した、公立でない",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "姿勢",
+      "reading": "しせい",
+      "hint": "体の構え方、取り組む態度",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "視力",
+      "reading": "しりょく",
+      "hint": "目で見る能力、視覚の力",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "単語",
+      "reading": "たんご",
+      "hint": "一つの意味を持つ言葉の単位",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "雑誌",
+      "reading": "ざっし",
+      "hint": "定期的に発行される読み物",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "磁石",
+      "reading": "じしゃく",
+      "hint": "鉄を引きつける性質を持つ物",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "射撃",
+      "reading": "しゃげき",
+      "hint": "銃や弓で的を狙って撃つこと",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "投げ捨てる",
+      "reading": "なげすてる",
+      "hint": "いらない物を放り投げる",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "尺度",
+      "reading": "しゃくど",
+      "hint": "測る基準、ものさし",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "若者",
+      "reading": "わかもの",
+      "hint": "年齢の若い人、青年",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "樹木",
+      "reading": "じゅもく",
+      "hint": "大きく育った木、樹林",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "収穫",
+      "reading": "しゅうかく",
+      "hint": "作物を取り入れること、成果",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "宗教",
+      "reading": "しゅうきょう",
+      "hint": "神や仏を信じる教え、信仰",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "就職",
+      "reading": "しゅうしょく",
+      "hint": "会社に入って働き始めること",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "民衆",
+      "reading": "みんしゅう",
+      "hint": "一般の人々、庶民",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "従来",
+      "reading": "じゅうらい",
+      "hint": "今まで、これまでのやり方",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "縦横",
+      "reading": "たてよこ",
+      "hint": "たてとよこ、縦の方向と横の方向",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "短縮",
+      "reading": "たんしゅく",
+      "hint": "短くする、時間を縮める",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "成熟",
+      "reading": "せいじゅく",
+      "hint": "十分に育つ、大人になる",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "純粋",
+      "reading": "じゅんすい",
+      "hint": "混じり気がない、汚れていない",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "処理",
+      "reading": "しょり",
+      "hint": "問題を解決する、片付ける",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "官署",
+      "reading": "かんしょ",
+      "hint": "政府の役所、官庁",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "諸国",
+      "reading": "しょこく",
+      "hint": "いろいろな国、多くの国",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "除去",
+      "reading": "じょきょ",
+      "hint": "取り除く、なくす",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "将来",
+      "reading": "しょうらい",
+      "hint": "これから先の時間、未来",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "負傷",
+      "reading": "ふしょう",
+      "hint": "けがをする、傷つく",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "障害",
+      "reading": "しょうがい",
+      "hint": "じゃまになるもの、困難",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "城郭",
+      "reading": "じょうかく",
+      "hint": "お城の建物、城の構造",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "蒸気",
+      "reading": "じょうき",
+      "hint": "水が沸騰して出る湯気",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "注射針",
+      "reading": "ちゅうしゃばり",
+      "hint": "薬を注入するための細い針",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "仁義",
+      "reading": "じんぎ",
+      "hint": "思いやりと正義、人としての道",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "垂直",
+      "reading": "すいちょく",
+      "hint": "まっすぐ上下の方向、縦",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "推測",
+      "reading": "すいそく",
+      "hint": "考えて予想する、推理",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "寸法",
+      "reading": "すんぽう",
+      "hint": "大きさや長さの測り方",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "盛大",
+      "reading": "せいだい",
+      "hint": "大規模で華やか、にぎやか",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "聖書",
+      "reading": "せいしょ",
+      "hint": "キリスト教の教典、神の教え",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "誠実",
+      "reading": "せいじつ",
+      "hint": "正直で真面目、嘘をつかない",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "宣言",
+      "reading": "せんげん",
+      "hint": "公式に発表する、宣告する",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "専門",
+      "reading": "せんもん",
+      "hint": "特定の分野に詳しい、スペシャリスト",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "温泉",
+      "reading": "おんせん",
+      "hint": "地中から湧く暖かいお湯",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "洗濯",
+      "reading": "せんたく",
+      "hint": "服を水で洗ってきれいにする",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "染料",
+      "reading": "せんりょう",
+      "hint": "布や糸に色をつける材料",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "善悪",
+      "reading": "ぜんあく",
+      "hint": "良いことと悪いこと、正義と悪",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "演奏",
+      "reading": "えんそう",
+      "hint": "楽器で音楽を奏でる",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "窓口",
+      "reading": "まどぐち",
+      "hint": "手続きをする受付の場所",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "創作",
+      "reading": "そうさく",
+      "hint": "新しく作り出す、創造する",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "服装",
+      "reading": "ふくそう",
+      "hint": "着ている服、身なり",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "地層",
+      "reading": "ちそう",
+      "hint": "地面の下の土の重なり",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "操作",
+      "reading": "そうさ",
+      "hint": "機械を動かす、コントロールする",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "貯蔵",
+      "reading": "ちょぞう",
+      "hint": "大切にしまっておく、保管する",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "内臓",
+      "reading": "ないぞう",
+      "hint": "体の中にある器官、胃や心臓など",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "生存",
+      "reading": "せいぞん",
+      "hint": "生きていること、生き残る",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "尊重",
+      "reading": "そんちょう",
+      "hint": "大切に思う、敬う",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "住宅",
+      "reading": "じゅうたく",
+      "hint": "人が住む建物、家",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "担当",
+      "reading": "たんとう",
+      "hint": "責任を持って受け持つ",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "探検",
+      "reading": "たんけん",
+      "hint": "未知の場所を調べに行く",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "誕生",
+      "reading": "たんじょう",
+      "hint": "生まれること、バースデー",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "階段",
+      "reading": "かいだん",
+      "hint": "上の階に上がる段々",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "暖房",
+      "reading": "だんぼう",
+      "hint": "部屋を暖かくする設備",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "価値",
+      "reading": "かち",
+      "hint": "どれだけ大切か、値打ち",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "宇宙",
+      "reading": "うちゅう",
+      "hint": "地球を取り巻く無限の空間",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "忠実",
+      "reading": "ちゅうじつ",
+      "hint": "真面目で裏切らない、誠実",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "著者",
+      "reading": "ちょしゃ",
+      "hint": "本を書いた人、作者",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "官庁",
+      "reading": "かんちょう",
+      "hint": "政府の役所、お役所",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "頂上",
+      "reading": "ちょうじょう",
+      "hint": "山の一番高いところ、てっぺん",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "潮流",
+      "reading": "ちょうりゅう",
+      "hint": "海の水の流れ、時代の流れ",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "家賃",
+      "reading": "やちん",
+      "hint": "家を借りるために払うお金",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "痛み",
+      "reading": "いたみ",
+      "hint": "体が痛いこと、苦痛",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "展開",
+      "reading": "てんかい",
+      "hint": "広げる、物事が進展する",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "検討",
+      "reading": "けんとう",
+      "hint": "詳しく調べて考える",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "政党",
+      "reading": "せいとう",
+      "hint": "政治の考えが同じ人の集まり",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "砂糖",
+      "reading": "さとう",
+      "hint": "甘い調味料、お菓子に使う",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "配達",
+      "reading": "はいたつ",
+      "hint": "物を目的地まで運んで渡す",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "困難",
+      "reading": "こんなん",
+      "hint": "難しくて大変、苦労する",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "牛乳",
+      "reading": "ぎゅうにゅう",
+      "hint": "牛から取れる白い飲み物",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "承認",
+      "reading": "しょうにん",
+      "hint": "正しいと認める、許可する",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "納得",
+      "reading": "なっとく",
+      "hint": "理解して受け入れる、合意する",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "頭脳",
+      "reading": "ずのう",
+      "hint": "考える力、知能",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "派遣",
+      "reading": "はけん",
+      "hint": "人を送り出す、出向させる",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "参拝",
+      "reading": "さんぱい",
+      "hint": "神社やお寺にお参りする",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "背景",
+      "reading": "はいけい",
+      "hint": "後ろの景色、物事の裏の事情",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "肺",
+      "reading": "はい",
+      "hint": "呼吸をする内臓、酸素を取り入れる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "俳句",
+      "reading": "はいく",
+      "hint": "五七五の短い詩、日本の伝統文学",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "学級",
+      "reading": "がっきゅう",
+      "hint": "同じクラスの生徒たち",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "晩餐",
+      "reading": "ばんさん",
+      "hint": "夜の食事、ディナー",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "否定",
+      "reading": "ひてい",
+      "hint": "だめだと言う、反対する",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "批判",
+      "reading": "ひはん",
+      "hint": "悪い点を指摘する、非難する",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "秘密",
+      "reading": "ひみつ",
+      "hint": "他の人に知られたくないこと",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "腹部",
+      "reading": "ふくぶ",
+      "hint": "お腹の部分、胃がある場所",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "奮闘",
+      "reading": "ふんとう",
+      "hint": "一生懸命頑張る、必死に戦う",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "並列",
+      "reading": "へいれつ",
+      "hint": "同じレベルで並べる、平行",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "陛下",
+      "reading": "へいか",
+      "hint": "天皇や皇后を敬って呼ぶ言葉",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "閉鎖",
+      "reading": "へいさ",
+      "hint": "閉じて使えなくする、シャットダウン",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "破片",
+      "reading": "はへん",
+      "hint": "壊れて散らばった小さな欠片",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "補助",
+      "reading": "ほじょ",
+      "hint": "足りない部分を助ける、サポート",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "日暮れ",
+      "reading": "ひぐれ",
+      "hint": "太陽が沈む時間、夕方",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "宝物",
+      "reading": "たからもの",
+      "hint": "とても大切で価値のある物",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "訪問",
+      "reading": "ほうもん",
+      "hint": "人を訪ねて行く、お客として行く",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "死亡",
+      "reading": "しぼう",
+      "hint": "命がなくなること、亡くなる",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "忘却",
+      "reading": "ぼうきゃく",
+      "hint": "忘れてしまうこと、記憶を失う",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "棒状",
+      "reading": "ぼうじょう",
+      "hint": "棒のような細長い形",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "何枚",
+      "reading": "なんまい",
+      "hint": "薄い物の数を数える時の単位",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "開幕",
+      "reading": "かいまく",
+      "hint": "劇や試合などが始まること",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "秘密",
+      "reading": "ひみつ",
+      "hint": "人に知られたくない大切なこと",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "同盟",
+      "reading": "どうめい",
+      "hint": "仲間になって協力する約束",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "模様",
+      "reading": "もよう",
+      "hint": "布や紙に描かれた飾りの絵",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "翻訳",
+      "reading": "ほんやく",
+      "hint": "外国語を日本語に直す",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "郵便",
+      "reading": "ゆうびん",
+      "hint": "手紙や荷物を送るサービス",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "優秀",
+      "reading": "ゆうしゅう",
+      "hint": "とても優れている、素晴らしい",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "幼児",
+      "reading": "ようじ",
+      "hint": "小さな子ども、赤ちゃんから就学前",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "欲望",
+      "reading": "よくぼう",
+      "hint": "何かを強く欲しがる気持ち",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "翌年",
+      "reading": "よくねん",
+      "hint": "次の年、来年",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "混乱",
+      "reading": "こんらん",
+      "hint": "ごちゃごちゃして秩序がない状態",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "卵",
+      "reading": "たまご",
+      "hint": "鳥が産む、料理によく使う食材",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "一覧",
+      "reading": "いちらん",
+      "hint": "全部をまとめて見られるリスト",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "裏側",
+      "reading": "うらがわ",
+      "hint": "表と反対の面、後ろ側",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "法律",
+      "reading": "ほうりつ",
+      "hint": "国民が守らなければいけない決まり",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "臨時",
+      "reading": "りんじ",
+      "hint": "一時的な、急に決まった",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "朗読",
+      "reading": "ろうどく",
+      "hint": "声に出して読むこと、音読",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "議論",
+      "reading": "ぎろん",
+      "hint": "意見を出し合って話し合う",
+      "difficulty": 2
+    }
+  ],
+  "wordCategories": {
+    "abstract": ["異", "常", "永", "遠", "権", "利", "憲", "法", "自", "己", "純", "粋", "価", "値", "善", "悪", "真", "理"],
+    "society": ["地", "域", "経", "済", "政", "治", "政", "策", "内", "閣", "法", "律", "裁", "判", "民", "主", "議", "論"],
+    "science": ["宇", "宙", "磁", "石", "液", "体", "蒸", "気", "地", "層", "遺", "跡", "穀", "物", "養", "蚕"],
+    "body": ["胸", "筋", "肉", "骨", "格", "内", "臓", "肺", "腹", "部", "頭", "脳", "呼", "吸"],
+    "action": ["延", "長", "拡", "大", "供", "給", "処", "理", "操", "作", "探", "検", "創", "作", "演", "奏", "翻", "訳"],
+    "time": ["将", "来", "従", "来", "翌", "年", "臨", "時", "誕", "生", "成", "熟"],
+    "places": ["沿", "岸", "砂", "漠", "温", "泉", "住", "宅", "官", "署", "郵", "便"],
+    "things": ["映", "画", "机", "絹", "糸", "冊", "子", "雑", "誌", "砂", "糖", "卵", "宝", "物"],
+    "feelings": ["尊", "敬", "孝", "行", "誠", "実", "秘", "密", "欲", "望", "奮", "闘"],
+    "nature": ["桜", "紅", "葉", "灰", "色", "樹", "木", "収", "穫", "潮", "流"],
+    "work": ["勤", "務", "就", "職", "担", "当", "専", "門", "看", "護", "警", "察"],
+    "adjectives": ["貴", "重", "激", "しい", "厳", "格", "困", "難", "盛", "大", "優", "秀", "純", "粋"]
+  }
+}

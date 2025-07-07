@@ -1,0 +1,1051 @@
+{
+  "grade": 4,
+  "totalKanji": 202,
+  "kanjiList": [
+    "愛", "案", "以", "衣", "位", "茨", "印", "英", "栄", "媛",
+    "塩", "岡", "億", "加", "果", "貨", "課", "芽", "賀", "改",
+    "械", "害", "街", "各", "覚", "潟", "完", "官", "管", "関",
+    "観", "願", "岐", "希", "季", "旗", "器", "機", "議", "求",
+    "泣", "給", "挙", "漁", "共", "協", "鏡", "競", "極", "熊",
+    "訓", "軍", "郡", "群", "径", "景", "芸", "欠", "結", "建",
+    "健", "験", "固", "功", "好", "香", "候", "康", "佐", "差",
+    "菜", "最", "埼", "材", "崎", "昨", "札", "刷", "察", "参",
+    "産", "散", "残", "氏", "司", "試", "児", "治", "滋", "辞",
+    "鹿", "失", "借", "種", "周", "祝", "順", "初", "松", "笑",
+    "唱", "焼", "照", "城", "縄", "臣", "信", "井", "成", "省",
+    "清", "静", "席", "積", "折", "節", "説", "浅", "戦", "選",
+    "然", "争", "倉", "巣", "束", "側", "続", "卒", "孫", "帯",
+    "隊", "達", "単", "置", "仲", "沖", "兆", "低", "底", "的",
+    "典", "伝", "徒", "努", "灯", "働", "特", "徳", "栃", "奈",
+    "梨", "熱", "念", "敗", "梅", "博", "阪", "飯", "飛", "必",
+    "票", "標", "不", "夫", "付", "府", "阜", "富", "副", "兵",
+    "別", "辺", "変", "便", "包", "法", "望", "牧", "末", "満",
+    "未", "民", "無", "約", "勇", "要", "養", "浴", "利", "陸",
+    "良", "料", "量", "輪", "類", "令", "冷", "例", "連", "老",
+    "労", "録"
+  ],
+  "questions": [
+    {
+      "type": "both",
+      "word": "愛情",
+      "reading": "あいじょう",
+      "hint": "家族や友だちを大切に思う気持ち",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "案内",
+      "reading": "あんない",
+      "hint": "道を教える、場所を説明する",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "以上",
+      "reading": "いじょう",
+      "hint": "それより多い、それを含んで上",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "衣服",
+      "reading": "いふく",
+      "hint": "着る物、洋服や和服",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "位置",
+      "reading": "いち",
+      "hint": "物がある場所、位置関係",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "囲む",
+      "reading": "かこむ",
+      "hint": "周りを取り囲む、みんなで輪になる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "印象",
+      "reading": "いんしょう",
+      "hint": "心に残る感じ、第一印象",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "英語",
+      "reading": "えいご",
+      "hint": "外国の言葉、Hello, Thank you",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "栄養",
+      "reading": "えいよう",
+      "hint": "体を元気にする、食べ物の力",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "塩",
+      "reading": "しお",
+      "hint": "海水から作る白い調味料、しょっぱい",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "億",
+      "reading": "おく",
+      "hint": "とても大きな数、100,000,000",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "加える",
+      "reading": "くわえる",
+      "hint": "新しく付け足す、仲間に加える",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "果物",
+      "reading": "くだもの",
+      "hint": "りんごやみかん、甘い食べ物",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "課題",
+      "reading": "かだい",
+      "hint": "やらなければいけない勉強や仕事",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "芽",
+      "reading": "め",
+      "hint": "植物の新しい部分、春に出てくる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "改良",
+      "reading": "かいりょう",
+      "hint": "もっと良くする、直して良くする",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "機械",
+      "reading": "きかい",
+      "hint": "人の代わりに働く道具、ロボットなど",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "各自",
+      "reading": "かくじ",
+      "hint": "一人一人、それぞれの人",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "覚える",
+      "reading": "おぼえる",
+      "hint": "頭に入れる、記憶する",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "完成",
+      "reading": "かんせい",
+      "hint": "最後まで作り上げる、完全に出来上がる",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "管理",
+      "reading": "かんり",
+      "hint": "きちんと世話をする、責任を持つ",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "関係",
+      "reading": "かんけい",
+      "hint": "つながり、お互いの関わり",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "観察",
+      "reading": "かんさつ",
+      "hint": "よく見て調べる、理科の実験で",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "願い",
+      "reading": "ねがい",
+      "hint": "心から望むこと、お祈りすること",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "希望",
+      "reading": "きぼう",
+      "hint": "こうなって欲しいという気持ち",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "季節",
+      "reading": "きせつ",
+      "hint": "春夏秋冬、一年の時期",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "喜ぶ",
+      "reading": "よろこぶ",
+      "hint": "うれしい気持ちになる、笑顔になる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "旗",
+      "reading": "はた",
+      "hint": "国や学校の印、風でひらひら",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "器具",
+      "reading": "きぐ",
+      "hint": "何かをするための道具",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "議論",
+      "reading": "ぎろん",
+      "hint": "みんなで話し合う、意見を交換する",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "求める",
+      "reading": "もとめる",
+      "hint": "欲しいと思う、探す",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "泣く",
+      "reading": "なく",
+      "hint": "悲しいときに涙を流す",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "救助",
+      "reading": "きゅうじょ",
+      "hint": "困っている人を助ける、救う",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "給食",
+      "reading": "きゅうしょく",
+      "hint": "学校で食べる昼ご飯",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "漁業",
+      "reading": "ぎょぎょう",
+      "hint": "魚を捕る仕事、海の仕事",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "共通",
+      "reading": "きょうつう",
+      "hint": "みんなに同じ、共有している",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "協力",
+      "reading": "きょうりょく",
+      "hint": "みんなで力を合わせる、助け合う",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "鏡",
+      "reading": "かがみ",
+      "hint": "自分の顔が映る、身だしなみを整える",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "競争",
+      "reading": "きょうそう",
+      "hint": "誰が一番か争う、かけっこや試合",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "訓練",
+      "reading": "くんれん",
+      "hint": "上手になるための練習、避難訓練",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "軍隊",
+      "reading": "ぐんたい",
+      "hint": "国を守る人たち、自衛隊",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "型",
+      "reading": "かた",
+      "hint": "決まった形、お手本",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "景色",
+      "reading": "けしき",
+      "hint": "見渡した風景、美しい眺め",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "芸術",
+      "reading": "げいじゅつ",
+      "hint": "美しいものを作る、絵や音楽",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "結果",
+      "reading": "けっか",
+      "hint": "最後にどうなったか、テストの結果",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "建設",
+      "reading": "けんせつ",
+      "hint": "建物を建てる、道路を作る",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "健康",
+      "reading": "けんこう",
+      "hint": "体が元気、病気でない状態",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "験証",
+      "reading": "けんしょう",
+      "hint": "試して確かめる、証明する",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "固い",
+      "reading": "かたい",
+      "hint": "やわらかくない、石のように",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "好き",
+      "reading": "すき",
+      "hint": "気に入っている、楽しいと思う",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "候補",
+      "reading": "こうほ",
+      "hint": "選ばれる可能性がある人や物",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "航海",
+      "reading": "こうかい",
+      "hint": "船で海を渡る、遠い場所へ行く",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "告知",
+      "reading": "こくち",
+      "hint": "みんなに知らせる、発表する",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "差",
+      "reading": "さ",
+      "hint": "違い、どれだけ違うか",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "野菜",
+      "reading": "やさい",
+      "hint": "畑で育てる、体に良い食べ物",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "最高",
+      "reading": "さいこう",
+      "hint": "一番良い、これ以上ない",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "材料",
+      "reading": "ざいりょう",
+      "hint": "何かを作るのに必要な物",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "昨日",
+      "reading": "きのう",
+      "hint": "今日の前の日、一日前",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "札",
+      "reading": "ふだ",
+      "hint": "名前や番号を書いた紙や板",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "参加",
+      "reading": "さんか",
+      "hint": "仲間に入る、一緒に参加する",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "産業",
+      "reading": "さんぎょう",
+      "hint": "物を作る仕事、工業や農業",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "散歩",
+      "reading": "さんぽ",
+      "hint": "ゆっくり歩く、外を歩き回る",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "武士",
+      "reading": "ぶし",
+      "hint": "昔の戦う人、刀を持った人",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "歴史",
+      "reading": "れきし",
+      "hint": "昔から今までの出来事",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "試験",
+      "reading": "しけん",
+      "hint": "勉強したことを調べる、テスト",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "児童",
+      "reading": "じどう",
+      "hint": "小学生の子どもたち",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "治療",
+      "reading": "ちりょう",
+      "hint": "病気やけがを治す、お医者さんがする",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "失敗",
+      "reading": "しっぱい",
+      "hint": "うまくいかない、間違える",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "借りる",
+      "reading": "かりる",
+      "hint": "一時的に使わせてもらう、図書館で本を借りる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "種類",
+      "reading": "しゅるい",
+      "hint": "同じ仲間の種類、いろいろな種類",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "祝日",
+      "reading": "しゅくじつ",
+      "hint": "お休みの日、お祝いの日",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "順番",
+      "reading": "じゅんばん",
+      "hint": "並ぶ順序、1番目2番目",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "初めて",
+      "reading": "はじめて",
+      "hint": "今まで一度もない、最初の経験",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "松",
+      "reading": "まつ",
+      "hint": "緑の針のような葉の木、お正月の飾り",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "笑う",
+      "reading": "わらう",
+      "hint": "楽しいときの表情、声を出して笑う",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "唱歌",
+      "reading": "しょうか",
+      "hint": "みんなで歌う歌、音楽の授業で",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "焼く",
+      "reading": "やく",
+      "hint": "火で熱して料理する、パンを焼く",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "照明",
+      "reading": "しょうめい",
+      "hint": "電気をつけて明るくする、部屋を照らす",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "城",
+      "reading": "しろ",
+      "hint": "昔の偉い人が住んだ建物、お城",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "信号",
+      "reading": "しんごう",
+      "hint": "道路の赤青黄色の灯り、交通ルール",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "成功",
+      "reading": "せいこう",
+      "hint": "うまくいく、目標を達成する",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "清潔",
+      "reading": "せいけつ",
+      "hint": "きれいで汚れがない、衛生的",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "静か",
+      "reading": "しずか",
+      "hint": "音がしない、騒がしくない",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "席",
+      "reading": "せき",
+      "hint": "座る場所、教室の自分の席",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "積む",
+      "reading": "つむ",
+      "hint": "重ねて高くする、ブロックを積む",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "節約",
+      "reading": "せつやく",
+      "hint": "無駄遣いしない、大切に使う",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "説明",
+      "reading": "せつめい",
+      "hint": "分かりやすく教える、詳しく話す",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "戦争",
+      "reading": "せんそう",
+      "hint": "国と国が戦うこと、平和でない状態",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "選択",
+      "reading": "せんたく",
+      "hint": "いくつかの中から選ぶ、決める",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "争い",
+      "reading": "あらそい",
+      "hint": "けんかや競争、仲良くない状態",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "束",
+      "reading": "たば",
+      "hint": "いくつかをまとめて縛ったもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "続く",
+      "reading": "つづく",
+      "hint": "途切れない、次から次へと",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "卒業",
+      "reading": "そつぎょう",
+      "hint": "学校を最後まで終える、6年生の最後",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "孫",
+      "reading": "まご",
+      "hint": "おじいちゃんおばあちゃんから見た子ども",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "帯",
+      "reading": "おび",
+      "hint": "着物に巻く布、腰に巻くもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "達成",
+      "reading": "たっせい",
+      "hint": "目標を実現する、やり遂げる",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "単位",
+      "reading": "たんい",
+      "hint": "測る時の基準、メートルやグラム",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "置く",
+      "reading": "おく",
+      "hint": "どこかに物を置く、設置する",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "仲間",
+      "reading": "なかま",
+      "hint": "一緒に行動する人たち、友達",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "低い",
+      "reading": "ひくい",
+      "hint": "高くない、下の方にある",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "停止",
+      "reading": "ていし",
+      "hint": "動いていたものが止まる",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "典型",
+      "reading": "てんけい",
+      "hint": "代表的な例、お手本になる",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "伝説",
+      "reading": "でんせつ",
+      "hint": "昔から語り継がれる話",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "努力",
+      "reading": "どりょく",
+      "hint": "一生懸命頑張る、諦めない",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "灯台",
+      "reading": "とうだい",
+      "hint": "船に光で道を教える建物",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "働く",
+      "reading": "はたらく",
+      "hint": "仕事をする、お金を稼ぐ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "特別",
+      "reading": "とくべつ",
+      "hint": "普通と違う、特に大切な",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "毒",
+      "reading": "どく",
+      "hint": "体に害のある物質、危険なもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "熱",
+      "reading": "ねつ",
+      "hint": "体温が高い、風邪をひいたとき",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "敗北",
+      "reading": "はいぼく",
+      "hint": "負けること、勝てないこと",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "梅",
+      "reading": "うめ",
+      "hint": "春に咲く花、梅干しの原料",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "博物館",
+      "reading": "はくぶつかん",
+      "hint": "珍しい物を展示する建物、恐竜の化石など",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "飛ぶ",
+      "reading": "とぶ",
+      "hint": "空中に浮かぶ、鳥や飛行機のように",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "費用",
+      "reading": "ひよう",
+      "hint": "お金がかかる、必要な金額",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "必要",
+      "reading": "ひつよう",
+      "hint": "なくてはならない、大切な",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "標準",
+      "reading": "ひょうじゅん",
+      "hint": "基準になる、普通の状態",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "夫婦",
+      "reading": "ふうふ",
+      "hint": "結婚した男の人と女の人",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "副",
+      "reading": "ふく",
+      "hint": "主なものの次、副会長や副社長",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "粉",
+      "reading": "こな",
+      "hint": "細かい粒、小麦粉や片栗粉",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "兵士",
+      "reading": "へいし",
+      "hint": "戦う人、軍隊の人",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "別れる",
+      "reading": "わかれる",
+      "hint": "一緒にいた人と離れる、さよならする",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "変化",
+      "reading": "へんか",
+      "hint": "今までと違うようになる、変わる",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "便利",
+      "reading": "べんり",
+      "hint": "使いやすい、役に立つ",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "包む",
+      "reading": "つつむ",
+      "hint": "紙や布で覆う、プレゼントを包む",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "法律",
+      "reading": "ほうりつ",
+      "hint": "みんなが守るルール、国の決まり",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "望む",
+      "reading": "のぞむ",
+      "hint": "こうなって欲しいと思う、願う",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "牧場",
+      "reading": "ぼくじょう",
+      "hint": "牛や馬を飼う広い場所",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "満足",
+      "reading": "まんぞく",
+      "hint": "十分で嬉しい、満腹のような気持ち",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "未来",
+      "reading": "みらい",
+      "hint": "これから先のこと、将来",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "民族",
+      "reading": "みんぞく",
+      "hint": "同じ文化を持つ人々の集まり",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "約束",
+      "reading": "やくそく",
+      "hint": "必ず守ると決めたこと",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "勇気",
+      "reading": "ゆうき",
+      "hint": "怖がらない心、頑張る気持ち",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "要求",
+      "reading": "ようきゅう",
+      "hint": "必要だと強く求める、要望する",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "養育",
+      "reading": "よういく",
+      "hint": "子どもを育てる、大きくする",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "浴びる",
+      "reading": "あびる",
+      "hint": "水や光を全身に受ける、シャワーを浴びる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "利用",
+      "reading": "りよう",
+      "hint": "役に立つように使う、活用する",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "陸地",
+      "reading": "りくち",
+      "hint": "海でない土地、大陸",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "量",
+      "reading": "りょう",
+      "hint": "どのくらいの多さ、分量",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "輪",
+      "reading": "わ",
+      "hint": "丸い形、みんなで手をつなぐ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "類似",
+      "reading": "るいじ",
+      "hint": "似ている、同じような",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "冷たい",
+      "reading": "つめたい",
+      "hint": "温度が低い、氷のような",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "例",
+      "reading": "れい",
+      "hint": "説明のための具体的な話、例え",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "連絡",
+      "reading": "れんらく",
+      "hint": "相手に知らせる、電話やメール",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "労働",
+      "reading": "ろうどう",
+      "hint": "体や頭を使って働く、仕事をする",
+      "difficulty": 2
+    }
+  ],
+  "wordCategories": {
+    "nature": ["塩", "芽", "梅", "松", "熱", "冷", "陸", "島"],
+    "school": ["課", "題", "英", "語", "給", "食", "児", "童", "試", "験", "卒", "業", "博", "物", "館"],
+    "body": ["胃", "血", "腸", "脈", "熱"],
+    "time": ["昨", "季", "節", "初", "歴", "史", "未", "来"],
+    "action": ["囲", "加", "改", "覚", "求", "泣", "救", "笑", "唱", "焼", "積", "続", "置", "働", "飛", "包", "望", "浴", "利", "用"],
+    "places": ["位", "置", "機", "械", "城", "席", "停", "灯", "台", "牧", "場", "陸", "地"],
+    "things": ["衣", "服", "印", "旗", "器", "鏡", "型", "札", "束", "帯", "粉", "輪"],
+    "feelings": ["愛", "希", "望", "喜", "好", "勇", "気", "満", "足"],
+    "work": ["官", "管", "議", "漁", "協", "軍", "建", "産", "士", "治", "兵", "労", "働"],
+    "numbers": ["億", "差", "量", "単", "位", "倍"],
+    "adjectives": ["固", "低", "特", "別", "必", "要", "便", "利", "冷", "静", "清", "潔"],
+    "abstract": ["案", "関", "係", "観", "察", "完", "成", "結", "果", "健", "康", "成", "功", "失", "敗", "努", "力", "約", "束", "例"]
+  }
+}

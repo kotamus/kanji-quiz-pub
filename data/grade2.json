@@ -1,0 +1,623 @@
+{
+  "grade": 2,
+  "totalKanji": 160,
+  "kanjiList": [
+    "引", "羽", "雲", "園", "遠", "何", "科", "夏", "家", "歌",
+    "画", "回", "会", "海", "絵", "外", "角", "楽", "活", "間",
+    "丸", "岩", "顔", "汽", "記", "帰", "弓", "牛", "魚", "京",
+    "強", "教", "近", "兄", "形", "計", "元", "言", "原", "戸",
+    "古", "午", "後", "語", "工", "公", "広", "交", "光", "考",
+    "行", "高", "黄", "合", "谷", "国", "黒", "今", "才", "細",
+    "作", "算", "止", "市", "矢", "姉", "思", "紙", "寺", "自",
+    "時", "室", "社", "弱", "首", "秋", "週", "春", "書", "少",
+    "場", "色", "食", "心", "新", "親", "図", "数", "西", "声",
+    "星", "晴", "切", "雪", "船", "線", "前", "組", "走", "多",
+    "太", "体", "台", "地", "池", "知", "茶", "昼", "長", "鳥",
+    "朝", "直", "通", "弟", "店", "点", "電", "刀", "冬", "当",
+    "東", "答", "頭", "同", "道", "読", "内", "南", "肉", "馬",
+    "売", "買", "麦", "半", "番", "父", "風", "分", "聞", "米",
+    "歩", "母", "方", "北", "毎", "妹", "万", "明", "鳴", "毛",
+    "門", "夜", "野", "友", "用", "曜", "来", "里", "理", "話"
+  ],
+  "questions": [
+    {
+      "type": "both",
+      "word": "教室",
+      "reading": "きょうしつ",
+      "hint": "先生がじゅぎょうをする、つくえがならんでいる部屋",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "友だち",
+      "reading": "ともだち",
+      "hint": "学校でいっしょにあそぶ、なかよしの人",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "夏休み",
+      "reading": "なつやすみ",
+      "hint": "7月と8月のながいおやすみ、プールにいける",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "新しい",
+      "reading": "あたらしい",
+      "hint": "きのう買った、ピカピカでまだつかっていない",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "買い物",
+      "reading": "かいもの",
+      "hint": "お店でお金をはらって、ほしいものをもらう",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "電車",
+      "reading": "でんしゃ",
+      "hint": "レールの上を走る、駅でのる長いのりもの",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "春",
+      "reading": "はる",
+      "hint": "さくらがさく、あたたかくなるきせつ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "毎日",
+      "reading": "まいにち",
+      "hint": "月よう日も火よう日も、いつもいつも",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "弟",
+      "reading": "おとうと",
+      "hint": "自分よりとしが下の男の子のきょうだい",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "風",
+      "reading": "かぜ",
+      "hint": "そらからふいてくる、きもちいい空気のながれ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "時間",
+      "reading": "じかん",
+      "hint": "とけいではかる、1日は24これがある",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "図書室",
+      "reading": "としょしつ",
+      "hint": "本がたくさんある、しずかにする部屋",
+      "difficulty": 3
+    },
+    {
+      "type": "both",
+      "word": "明るい",
+      "reading": "あかるい",
+      "hint": "電気をつけたとき、よく見えるようす",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "長い",
+      "reading": "ながい",
+      "hint": "へびのようにはしからはしまでがとおい",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "強い",
+      "reading": "つよい",
+      "hint": "力がある、まけない、スーパーマンみたい",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "広い",
+      "reading": "ひろい",
+      "hint": "こうていのように、はしまでがとおい",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "高い",
+      "reading": "たかい",
+      "hint": "山やビルのように、上までがとおい",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "食べ物",
+      "reading": "たべもの",
+      "hint": "ごはんやパン、おなかにいれるもの",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "朝",
+      "reading": "あさ",
+      "hint": "おきる時間、たいようがのぼるとき",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "昼",
+      "reading": "ひる",
+      "hint": "お昼ごはんを食べる、まん中の時間",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "夜",
+      "reading": "よる",
+      "hint": "ねる時間、そらがくらいとき",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "父",
+      "reading": "ちち",
+      "hint": "おとうさんのこと、男のおや",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "母",
+      "reading": "はは",
+      "hint": "おかあさんのこと、女のおや",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "兄",
+      "reading": "あに",
+      "hint": "自分よりとしが上の男の子のきょうだい",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "姉",
+      "reading": "あね",
+      "hint": "自分よりとしが上の女の子のきょうだい",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "妹",
+      "reading": "いもうと",
+      "hint": "自分よりとしが下の女の子のきょうだい",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "国語",
+      "reading": "こくご",
+      "hint": "日本語をべんきょうするじゅぎょう",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "算数",
+      "reading": "さんすう",
+      "hint": "たし算やひき算をするじゅぎょう",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "東",
+      "reading": "ひがし",
+      "hint": "たいようがのぼる方がく",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "西",
+      "reading": "にし",
+      "hint": "たいようがしずむ方がく",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "南",
+      "reading": "みなみ",
+      "hint": "ひるまたいようがある方がく",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "北",
+      "reading": "きた",
+      "hint": "ほっきょくがある方がく",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "雨",
+      "reading": "あめ",
+      "hint": "そらからふってくる水、かさをさすとき",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "雪",
+      "reading": "ゆき",
+      "hint": "ふゆにふる、しろくてつめたいもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "雲",
+      "reading": "くも",
+      "hint": "そらにうかぶ、しろいわたみたいなもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "海",
+      "reading": "うみ",
+      "hint": "しおからい水がある、ひろくて大きいところ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "池",
+      "reading": "いけ",
+      "hint": "こうえんにある、さかながいる水のばしょ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "馬",
+      "reading": "うま",
+      "hint": "パカパカ走る、人がのれるどうぶつ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "牛",
+      "reading": "うし",
+      "hint": "モーとなく、ぎゅうにゅうをだすどうぶつ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "魚",
+      "reading": "さかな",
+      "hint": "水の中にすむ、およぐいきもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "鳥",
+      "reading": "とり",
+      "hint": "つばさがあって、そらをとぶいきもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "歌",
+      "reading": "うた",
+      "hint": "みんなでうたう、メロディーがあるもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "絵",
+      "reading": "え",
+      "hint": "えんぴつやクレヨンでかく、しゃしんじゃないもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "音楽",
+      "reading": "おんがく",
+      "hint": "ピアノやリコーダーをえんそうするじゅぎょう",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "体育",
+      "reading": "たいいく",
+      "hint": "うんどうじょうで走ったりとんだりするじゅぎょう",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "外国",
+      "reading": "がいこく",
+      "hint": "日本じゃない、ほかの国のこと",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "今日",
+      "reading": "きょう",
+      "hint": "きのうのつぎの日、あしたのまえの日",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "明日",
+      "reading": "あした",
+      "hint": "今日のつぎの日、まだこない日",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "先週",
+      "reading": "せんしゅう",
+      "hint": "今週のまえの1週間",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "来週",
+      "reading": "らいしゅう",
+      "hint": "今週のつぎの1週間",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "公園",
+      "reading": "こうえん",
+      "hint": "ブランコやすべりだいがある、みんながあそぶばしょ",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "近い",
+      "reading": "ちかい",
+      "hint": "すぐそこにある、あるいてすぐつく",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "遠い",
+      "reading": "とおい",
+      "hint": "ずっとむこうにある、あるくのにじかんがかかる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "古い",
+      "reading": "ふるい",
+      "hint": "ずっとまえからある、おじいちゃんのもちもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "細い",
+      "reading": "ほそい",
+      "hint": "えんぴつのように、ふとくない",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "太い",
+      "reading": "ふとい",
+      "hint": "大きな木のみきのように、ほそくない",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "黒い",
+      "reading": "くろい",
+      "hint": "よるのそらの色、すみの色",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "黄色",
+      "reading": "きいろ",
+      "hint": "バナナやひまわりの色",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "茶色",
+      "reading": "ちゃいろ",
+      "hint": "どろやチョコレートの色",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "分かる",
+      "reading": "わかる",
+      "hint": "べんきょうして、こたえがわかるようになる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "聞く",
+      "reading": "きく",
+      "hint": "みみでおとやこえをかんじる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "話す",
+      "reading": "はなす",
+      "hint": "くちでことばをいう、おしゃべりする",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "読む",
+      "reading": "よむ",
+      "hint": "本やきょうかしょを見て、ないようをりかいする",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "書く",
+      "reading": "かく",
+      "hint": "えんぴつで字や絵をかみにつける",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "考える",
+      "reading": "かんがえる",
+      "hint": "あたまをつかって、こたえをみつける",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "走る",
+      "reading": "はしる",
+      "hint": "あしをはやくうごかして、すすむ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "歩く",
+      "reading": "あるく",
+      "hint": "あしでゆっくり、いっぽずつすすむ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "止まる",
+      "reading": "とまる",
+      "hint": "うごいていたものが、うごかなくなる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "帰る",
+      "reading": "かえる",
+      "hint": "学校からいえに、もとのばしょにもどる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "来る",
+      "reading": "くる",
+      "hint": "こっちにむかってくる、やってくる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "行く",
+      "reading": "いく",
+      "hint": "どこかへむかってすすむ、でかける",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "米",
+      "reading": "こめ",
+      "hint": "たいてごはんになる、しろいつぶつぶ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "肉",
+      "reading": "にく",
+      "hint": "ぎゅうやぶたからとれる、たべもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "野さい",
+      "reading": "やさい",
+      "hint": "はたけでそだてる、みどりのたべもの",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "番号",
+      "reading": "ばんごう",
+      "hint": "じゅんばんをあらわす、すうじ",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "半分",
+      "reading": "はんぶん",
+      "hint": "ぜんぶを2つにわけた、ひとつぶん",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "地図",
+      "reading": "ちず",
+      "hint": "みちやたてものがかいてある、ばしょがわかるかみ",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "電気",
+      "reading": "でんき",
+      "hint": "スイッチをおすと、へやがあかるくなる",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "店",
+      "reading": "みせ",
+      "hint": "ものをうっているところ、かいものをするばしょ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "門",
+      "reading": "もん",
+      "hint": "いえや学校のいりぐち、おおきなとびら",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "家",
+      "reading": "いえ",
+      "hint": "みんながすんでいる、たてもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "道",
+      "reading": "みち",
+      "hint": "くるまや人がとおる、ながいところ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "船",
+      "reading": "ふね",
+      "hint": "水の上をすすむ、大きなのりもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "汽車",
+      "reading": "きしゃ",
+      "hint": "せきたんをもやして走る、むかしのでんしゃ",
+      "difficulty": 2
+    }
+  ],
+  "wordCategories": {
+    "nature": ["雲", "雨", "風", "雪", "星", "海", "池", "谷", "岩", "野"],
+    "school": ["教", "室", "算", "数", "国", "語", "図", "書", "体", "音", "楽", "科"],
+    "time": ["朝", "昼", "夜", "春", "夏", "秋", "冬", "週", "毎", "今", "明", "後"],
+    "family": ["父", "母", "兄", "弟", "姉", "妹", "親"],
+    "action": ["走", "歩", "止", "行", "来", "帰", "通", "読", "書", "聞", "話", "買", "売", "食", "思", "考"],
+    "things": ["車", "電", "船", "紙", "門", "店", "家", "米", "肉", "魚"],
+    "colors": ["黒", "黄", "茶", "色"],
+    "directions": ["東", "西", "南", "北", "前", "後", "内", "外"],
+    "adjectives": ["新", "古", "長", "短", "高", "低", "広", "狭", "強", "弱", "明", "暗", "多", "少", "太", "細", "近", "遠"]
+  }
+}

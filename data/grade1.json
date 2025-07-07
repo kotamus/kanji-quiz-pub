@@ -1,0 +1,584 @@
+{
+  "grade": 1,
+  "totalKanji": 80,
+  "kanjiList": [
+    "一", "右", "雨", "円", "王", "音", "下", "火", "花", "貝",
+    "学", "気", "九", "休", "玉", "金", "空", "月", "犬", "見",
+    "五", "口", "校", "左", "三", "山", "子", "四", "糸", "字",
+    "耳", "七", "車", "手", "十", "出", "女", "小", "上", "森",
+    "人", "水", "正", "生", "青", "夕", "石", "赤", "千", "川",
+    "先", "早", "草", "足", "村", "大", "男", "竹", "中", "虫",
+    "町", "天", "田", "土", "二", "日", "入", "年", "白", "八",
+    "百", "文", "木", "本", "名", "目", "立", "力", "林", "六"
+  ],
+  "questions": [
+    {
+      "type": "both",
+      "word": "一",
+      "reading": "いち",
+      "hint": "かずの はじめ、ひとつ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "二",
+      "reading": "に",
+      "hint": "いちの つぎの かず",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "三",
+      "reading": "さん",
+      "hint": "にの つぎの かず",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "四",
+      "reading": "よん",
+      "hint": "さんの つぎの かず",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "五",
+      "reading": "ご",
+      "hint": "よんの つぎの かず",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "六",
+      "reading": "ろく",
+      "hint": "ごの つぎの かず",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "七",
+      "reading": "なな",
+      "hint": "ろくの つぎの かず",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "八",
+      "reading": "はち",
+      "hint": "ななの つぎの かず",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "九",
+      "reading": "きゅう",
+      "hint": "はちの つぎの かず",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "十",
+      "reading": "じゅう",
+      "hint": "きゅうの つぎの かず、りょうてのゆびのかず",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "百",
+      "reading": "ひゃく",
+      "hint": "じゅうが じゅうこ あつまったかず",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "千",
+      "reading": "せん",
+      "hint": "ひゃくが じゅうこ あつまったかず",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "山",
+      "reading": "やま",
+      "hint": "たかくて のぼるところ、みどりがいっぱい",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "川",
+      "reading": "かわ",
+      "hint": "みずが ながれている ながいところ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "木",
+      "reading": "き",
+      "hint": "はっぱが ある、みきがある しょくぶつ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "林",
+      "reading": "はやし",
+      "hint": "きが たくさん あつまった ところ",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "森",
+      "reading": "もり",
+      "hint": "きが もっとたくさん あつまった ところ",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "火",
+      "reading": "ひ",
+      "hint": "あつくて あかるい、もえるもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "水",
+      "reading": "みず",
+      "hint": "のむもの、てを あらうもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "土",
+      "reading": "つち",
+      "hint": "じめんの くろいもの、はなを うえるもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "空",
+      "reading": "そら",
+      "hint": "うえを みると あおい、くもが ある ところ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "雨",
+      "reading": "あめ",
+      "hint": "そらから ふってくる みず、かさを さすとき",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "石",
+      "reading": "いし",
+      "hint": "かたくて おもい、じめんに ある もの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "花",
+      "reading": "はな",
+      "hint": "きれいで いいにおいが する、さく もの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "草",
+      "reading": "くさ",
+      "hint": "みどりで じめんに はえる、ちいさい しょくぶつ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "竹",
+      "reading": "たけ",
+      "hint": "みどりで まっすぐ、ささの はっぱ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "犬",
+      "reading": "いぬ",
+      "hint": "ワンワンと なく、しっぽを ふる どうぶつ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "虫",
+      "reading": "むし",
+      "hint": "ちいさくて とぶ、あしが たくさん ある いきもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "貝",
+      "reading": "かい",
+      "hint": "うみに いる、かたい からを もつ いきもの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "人",
+      "reading": "ひと",
+      "hint": "わたしたちの こと、おとこと おんな",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "子",
+      "reading": "こ",
+      "hint": "こども、ちいさい ひと",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "女",
+      "reading": "おんな",
+      "hint": "おかあさんや おねえさん、じょせい",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "男",
+      "reading": "おとこ",
+      "hint": "おとうさんや おにいさん、だんせい",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "学校",
+      "reading": "がっこう",
+      "hint": "べんきょうを する ところ、せんせいが いる",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "先生",
+      "reading": "せんせい",
+      "hint": "べんきょうを おしえて くれる ひと",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "生",
+      "reading": "せい",
+      "hint": "いきている こと、うまれる こと",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "名まえ",
+      "reading": "なまえ",
+      "hint": "じぶんの なまえ、よばれる とき",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "年",
+      "reading": "ねん",
+      "hint": "いちねん、にねん、とし",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "月",
+      "reading": "つき",
+      "hint": "よるに みえる、まるくて しろい もの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "日",
+      "reading": "ひ",
+      "hint": "たいよう、あさ のぼる もの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "王さま",
+      "reading": "おうさま",
+      "hint": "くにの いちばん えらい ひと",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "玉",
+      "reading": "たま",
+      "hint": "まるい もの、ボールの かたち",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "金",
+      "reading": "きん",
+      "hint": "きいろくて ぴかぴか、たかい きんぞく",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "車",
+      "reading": "くるま",
+      "hint": "タイヤが ある、のって うごく もの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "本",
+      "reading": "ほん",
+      "hint": "よむ もの、ページが ある もの",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "文",
+      "reading": "ぶん",
+      "hint": "じを つなげた もの、ぶんしょう",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "字",
+      "reading": "じ",
+      "hint": "かく もの、ひらがなや かんじ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "手",
+      "reading": "て",
+      "hint": "ゆびが ごほん ある、もつ ところ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "足",
+      "reading": "あし",
+      "hint": "あるく ところ、くつを はく ところ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "目",
+      "reading": "め",
+      "hint": "みる ところ、かおに ふたつ ある",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "耳",
+      "reading": "みみ",
+      "hint": "きく ところ、あたまの よこに ある",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "口",
+      "reading": "くち",
+      "hint": "たべる ところ、はなす ところ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "力",
+      "reading": "ちから",
+      "hint": "つよい ひとが ある もの、もつ とき つかう",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "気",
+      "reading": "き",
+      "hint": "きもち、げんきの き",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "音",
+      "reading": "おと",
+      "hint": "みみで きく もの、おんがくの おん",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "糸",
+      "reading": "いと",
+      "hint": "ほそくて ながい、ぬう とき つかう",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "円",
+      "reading": "えん",
+      "hint": "おかねの たんい、まるい かたち",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "赤",
+      "reading": "あか",
+      "hint": "りんごの いろ、ひの いろ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "青",
+      "reading": "あお",
+      "hint": "そらの いろ、うみの いろ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "白",
+      "reading": "しろ",
+      "hint": "ゆきの いろ、くもの いろ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "大きい",
+      "reading": "おおきい",
+      "hint": "ちいさく ない、ぞうの ように",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "小さい",
+      "reading": "ちいさい",
+      "hint": "おおきく ない、ありの ように",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "上",
+      "reading": "うえ",
+      "hint": "したの はんたい、たかい ところ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "下",
+      "reading": "した",
+      "hint": "うえの はんたい、ひくい ところ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "中",
+      "reading": "なか",
+      "hint": "そとじゃ ない、まんなか",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "右",
+      "reading": "みぎ",
+      "hint": "はしを もつ ほうの て",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "左",
+      "reading": "ひだり",
+      "hint": "はしを もたない ほうの て",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "正しい",
+      "reading": "ただしい",
+      "hint": "まちがって いない、ただしい こたえ",
+      "difficulty": 2
+    },
+    {
+      "type": "both",
+      "word": "早い",
+      "reading": "はやい",
+      "hint": "おそく ない、じかんが みじかい",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "出る",
+      "reading": "でる",
+      "hint": "なかから そとへ、いえを でる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "入る",
+      "reading": "はいる",
+      "hint": "そとから なかへ、へやに はいる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "立つ",
+      "reading": "たつ",
+      "hint": "すわって いない、まっすぐ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "休む",
+      "reading": "やすむ",
+      "hint": "つかれた とき する、やすみじかん",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "見る",
+      "reading": "みる",
+      "hint": "めで する こと、テレビを みる",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "天",
+      "reading": "てん",
+      "hint": "そらの こと、てんきの てん",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "田",
+      "reading": "た",
+      "hint": "おこめを つくる ところ、みずが ある",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "町",
+      "reading": "まち",
+      "hint": "みんなが すんでいる ところ、いえが たくさん",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "村",
+      "reading": "むら",
+      "hint": "まちより ちいさい、いなかの ところ",
+      "difficulty": 1
+    },
+    {
+      "type": "both",
+      "word": "夕がた",
+      "reading": "ゆうがた",
+      "hint": "ひが しずむ じかん、そらが あかい",
+      "difficulty": 2
+    }
+  ],
+  "wordCategories": {
+    "numbers": ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "百", "千"],
+    "nature": ["山", "川", "木", "林", "森", "火", "水", "土", "空", "雨", "石", "花", "草", "竹", "月", "日"],
+    "animals": ["犬", "虫", "貝"],
+    "people": ["人", "子", "女", "男", "王"],
+    "school": ["学", "校", "先", "生", "文", "字", "本"],
+    "body": ["手", "足", "目", "耳", "口", "力"],
+    "colors": ["赤", "青", "白"],
+    "position": ["上", "下", "中", "右", "左"],
+    "action": ["出", "入", "立", "休", "見"],
+    "time": ["年", "月", "日", "早", "夕"],
+    "things": ["車", "玉", "金", "円", "糸", "音", "気", "名"],
+    "places": ["天", "田", "町", "村"],
+    "adjectives": ["大", "小", "正"]
+  }
+}
