@@ -827,6 +827,11 @@
         let score = 0;
         let allKanjiByGrade = {};
         let modalCallback = null;
+        
+        // 音声ファイル
+        let correctSound = new Audio('wav/correct.mp3');
+        let wrongSound = new Audio('wav/wrong.mp3');
+        let winSound = new Audio('wav/win.mp3');
 
         // カスタムモーダル機能
         function showModal(message, onOK, onCancel) {
@@ -909,6 +914,9 @@
             
             if (isCorrect) {
                 score++;
+                correctSound.play();
+            } else {
+                wrongSound.play();
             }
             
             setTimeout(function() {
@@ -1621,8 +1629,10 @@
             if (answer === question.correctAnswer) {
                 btn.classList.add('correct');
                 score++;
+                correctSound.play();
             } else {
                 btn.classList.add('incorrect');
+                wrongSound.play();
                 buttons.forEach(function(b) {
                     if (b.textContent === question.correctAnswer) {
                         b.classList.add('correct');
@@ -1650,6 +1660,7 @@
             
             if (percentage === 100) {
                 message += '\n🎉 完璧です！';
+                winSound.play();
             } else if (percentage >= 80) {
                 message += '\n😊 よくできました！';
             } else if (percentage >= 60) {
