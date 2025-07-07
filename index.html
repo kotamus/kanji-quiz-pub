@@ -1668,6 +1668,13 @@
 
         // 管理画面関連の関数
         function showAdminPanel() {
+            // パスコード認証
+            const passcode = prompt('管理者パスコードを入力してください:');
+            if (passcode !== '0123') {
+                alert('パスコードが間違っています。');
+                return;
+            }
+            
             document.getElementById('adminPanel').style.display = 'flex';
             showQuestionList(); // 初期表示
         }
